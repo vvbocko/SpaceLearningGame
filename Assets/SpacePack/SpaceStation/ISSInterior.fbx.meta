@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: 1bdeb281d258ce3498b45b7e7ae8a196
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Airlock01Shader
+    second: {fileID: 2100000, guid: 1464d0042460e8241a3e3c0bec759de6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Airlock02Shader
+    second: {fileID: 2100000, guid: e20b8b32f47e35649966c55e0b80d838, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columbus01Shader
+    second: {fileID: 2100000, guid: 6e96d59caf10f8e4aa376d565154ca77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columbus02Shader
+    second: {fileID: 2100000, guid: 5e518017acd93c749a0e051a9de8db8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columbus03Shader
+    second: {fileID: 2100000, guid: e43cf86b0f6065841b6011d811789dad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ColumbusIntBulkheadShader
+    second: {fileID: 2100000, guid: 2b60e956c49afd44980b685cbc1b8c00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CupolaIntShader
+    second: {fileID: 2100000, guid: f626c52caa717ff4b917446a4a5a03f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GenericIntHubLightsShader
+    second: {fileID: 2100000, guid: bf4cdd87bd4473d40875194469724ba7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GenericIntHubMetalsShader
+    second: {fileID: 2100000, guid: 40a978da8094a164084aaaeac31c971d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GenericIntHubShader
+    second: {fileID: 2100000, guid: 5b484e8aa9d8dc6479cce49ba3bae7f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GenericMiscDetailsLIGHTSshader
+    second: {fileID: 2100000, guid: 61cc3fc50fe01d04e82980d99823f5f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GenericMiscDetailsShader
+    second: {fileID: 2100000, guid: 47cf367ca31d2aa4e9639dfa2fb4034b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GlassShader
+    second: {fileID: 2100000, guid: 40a9fa9a06d77aa4498a44ebd479d292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JLPIntRacksShader
+    second: {fileID: 2100000, guid: 1a5be4837350b494ea60d430e49a574c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JLPInteriorShader
+    second: {fileID: 2100000, guid: 63919dfb1d004c04aa688aa7143fa9b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JPMBulkheadShader
+    second: {fileID: 2100000, guid: 7bc6e3cd653397141ab0346919513ad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JPMRacks01Shader
+    second: {fileID: 2100000, guid: 112cf4ef41e9bd245a7fc73d0b41e4a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JPMRacks02Shader
+    second: {fileID: 2100000, guid: d291074550befe34f859371ad3d19bd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JPMRacks03Shader
+    second: {fileID: 2100000, guid: 6289db7d10cd813438b6f8e422247d1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node1IntRackShader
+    second: {fileID: 2100000, guid: 2e8a09e448c00024088dfd9a3f34c4c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node1_Int_Bulkhead
+    second: {fileID: 2100000, guid: eeaa3444c78bd83498e84f111c3c8090, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node2IntBulkheadShader
+    second: {fileID: 2100000, guid: 147a3f9857e80834cb04f39817bc9aa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node2IntRackShader
+    second: {fileID: 2100000, guid: a03358cd58c048a4d9b81e612457fb60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node3IntBulkheadShader
+    second: {fileID: 2100000, guid: f9f5a8066286eb14bbb387840111e940, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node3IntRack01Shader
+    second: {fileID: 2100000, guid: f19e61c3c9a6a23498406eca865ff99f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Node3IntRack02Shader
+    second: {fileID: 2100000, guid: a4a2f5483f875bc4d95e267f1b3b3fc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PMM01Shader
+    second: {fileID: 2100000, guid: bfa7caedf3453264cbcb44b45e7b7275, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLabAFTBulkheadShader
+    second: {fileID: 2100000, guid: ea8317557b8945e43849d32a3bba3082, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLabFWDBulkheadShader
+    second: {fileID: 2100000, guid: 38f13fe307197ad44943704996a8e1fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLabRacks01Shader
+    second: {fileID: 2100000, guid: 50bb369312af1d74bb48883f237d4a5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLabRacks02Shader
+    second: {fileID: 2100000, guid: 26b762e3184305248a0529ccf3e5e5b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: USLabRacks03Shader
+    second: {fileID: 2100000, guid: 1225ad97dc542f54cb91d340a1554ee2, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
