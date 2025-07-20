@@ -6,7 +6,6 @@ public class ZeroGravityMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float drag = 10f;
 
     public Transform orientation;
 
