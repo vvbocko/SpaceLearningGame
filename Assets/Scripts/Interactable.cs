@@ -6,29 +6,36 @@ using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] public bool isInteractable = true;
+    [SerializeField] private bool isInteractable = true;
+    [SerializeField] private bool isPickable = false;
+    public bool IsPickable => isPickable;
 
-    Outline outline;
-     
-    public string message;
-     
-    public UnityEvent onInteraction;
+    [SerializeField] private string message;
+    [SerializeField] private UnityEvent onInteraction;
 
-    void Start()
+    private Outline outline;
+
+    void Awake()
     {
         outline = GetComponent<Outline>();
         DisableOutline();
     }
+
     public void Interact()
     {
-        onInteraction.Invoke();
+        if (isInteractable)
+        {
+            onInteraction?.Invoke();
+        }
     }
-    public void DisableOutline()
-    {
-        outline.enabled = false; 
-    }
+
     public void EnableOutline()
     {
-        outline.enabled = true;
+        if (outline != null) outline.enabled = true;
+    }
+
+    public void DisableOutline()
+    {
+        if (outline != null) outline.enabled = false;
     }
 }

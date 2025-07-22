@@ -5,65 +5,75 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public float playerReach = 3f;
-    Interactable currentInteractable;
+    [SerializeField] private PickupController pickupController;
     [SerializeField] private Camera playerCamera;
+    private Interactable currentInteractable;
 
+    [SerializeField] private float playerReach = 3f;
     void Update()
     {
-        CheckInteraction();
-        if (Input.GetKey(KeyCode.E) && currentInteractable != null)
+        HandleInteraction();
+    }
+
+    void HandleInteraction()
+    {
+        Interactable detectedInteractable = DetectInteractable();
+
+        if (detectedInteractable != currentInteractable)
         {
-            currentInteractable.Interact();
+            UpdateCurrentInteractable(detectedInteractable);
+        }
+
+        if (Input.GetMouseButtonDown(1) && pickupController.IsHoldingSomething())
+        {
+            pickupController.Drop();
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0) && currentInteractable != null)
+        {
+            if (currentInteractable.IsPickable)
+            {
+                if (pickupController.IsHoldingSomething())
+                {
+                    pickupController.Drop(); // Optional: drop current to pick up another
+                }
+
+                pickupController.TryPickup(currentInteractable);
+            }
+            else
+            {
+                currentInteractable.Interact();
+            }
         }
     }
 
-    void CheckInteraction()
+
+    Interactable DetectInteractable()
     {
-        RaycastHit hit;
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        
-        if (Physics.Raycast(ray, out hit, playerReach))
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, playerReach))
         {
-            if (hit.collider.tag == "Interactable")
+            if (hit.collider.TryGetComponent(out Interactable interactable) && interactable.enabled)
             {
-                Interactable newInteractable = hit.collider.GetComponent<Interactable>();
-                
-                if (currentInteractable && newInteractable != currentInteractable)
-                {
-                    SetNewCurrentInteractable(newInteractable);
-                }
-                if (newInteractable.enabled)
-                {
-                    SetNewCurrentInteractable(newInteractable);
-                }
-                else
-                {
-                    DisableCurrentInteractable();
-                }
-            }
-            else //je¿eli nie jest interactable
-            {
-                DisableCurrentInteractable();
+                return interactable;
             }
         }
-        else //je¿eli nic nie jest w zasiêgu
-        {
-            DisableCurrentInteractable();
-        }
+
+        return null;
     }
 
-    private void SetNewCurrentInteractable(Interactable newInteractable)
+    void UpdateCurrentInteractable(Interactable newInteractable)
     {
-        currentInteractable = newInteractable;
-        currentInteractable.EnableOutline();
-    }
-    private void DisableCurrentInteractable()
-    {
-        if (currentInteractable)
+        if (currentInteractable != null)
         {
             currentInteractable.DisableOutline();
-            currentInteractable = null;
+        }
+
+        currentInteractable = newInteractable;
+
+        if (currentInteractable != null)
+        {
+            currentInteractable.EnableOutline();
         }
     }
 }

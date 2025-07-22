@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3663997278169961249
+--- !u!1001 &884011501804022994
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,32 +11,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 33.95
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 33.95
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 33.95
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.104
+      value: 0.207
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.512
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.134
+      value: -96
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
@@ -86,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       propertyPath: m_Name
-      value: Pierogi_meshyModel
+      value: Pierog
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
@@ -100,43 +100,52 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1336953189353005668}
+      addedObject: {fileID: 6661656583634109610}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1436cf2e3cb589e4387ea7435266bb11,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7134380796006547318}
+      addedObject: {fileID: 4184592703855634712}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1436cf2e3cb589e4387ea7435266bb11,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6974076102960573327}
   m_SourcePrefab: {fileID: 100100000, guid: 1436cf2e3cb589e4387ea7435266bb11, type: 3}
---- !u!1 &4474409575702638192 stripped
+--- !u!1 &37658372344795523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1436cf2e3cb589e4387ea7435266bb11,
     type: 3}
-  m_PrefabInstance: {fileID: 3663997278169961249}
+  m_PrefabInstance: {fileID: 884011501804022994}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1336953189353005668
-MonoBehaviour:
+--- !u!136 &6661656583634109610
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4474409575702638192}
+  m_GameObject: {fileID: 37658372344795523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
---- !u!114 &7134380796006547318
+  serializedVersion: 2
+  m_Radius: 0.005
+  m_Height: 0.023
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4184592703855634712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4474409575702638192}
+  m_GameObject: {fileID: 37658372344795523}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06fea33fcc9f3ba45ab3eb5deb23c542, type: 3}
@@ -147,7 +156,7 @@ MonoBehaviour:
   onInteraction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4474409575702638192}
+      - m_Target: {fileID: 37658372344795523}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -159,3 +168,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6974076102960573327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37658372344795523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
