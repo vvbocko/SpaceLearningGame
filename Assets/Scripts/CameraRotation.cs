@@ -16,18 +16,33 @@ public class CameraRotation : MonoBehaviour
     private float xRotation;
     private float yRotation;
 
-    
+
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        SetCursorLock(true); // Initialize locked cursor
     }
+
+    // Public method to control cursor from other scripts
+    public void SetCursorLock(bool locked)
+    {
+        Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !locked;
+        
+        // Optional: Pause rotation when cursor is unlocked
+        if (!locked) 
+        {
+            xRotation = transform.localEulerAngles.x;
+            yRotation = transform.localEulerAngles.y;
+        }
+    }
+
     private void Update()
     {
-
-        RotationHandler();
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            RotationHandler();
+        }
     }
-
     private void RotationHandler()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;

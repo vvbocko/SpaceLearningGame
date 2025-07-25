@@ -1,18 +1,45 @@
+﻿using UnityEngine;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public static PlayerInteraction Instance { get; private set; }
+
+    [Header("References")]
     [SerializeField] private PickupController pickupController;
     [SerializeField] private Camera playerCamera;
-    private Interactable currentInteractable;
 
+    [Header("Settings")]
     [SerializeField] private float playerReach = 3f;
+
+    private Interactable currentInteractable;
+    private bool interactionEnabled = true;
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+    }
+
+    public void SetInteractionEnabled(bool enabled)
+    {
+        interactionEnabled = enabled;
+        GetComponent<ZeroGravityMovement>().enabled = enabled;
+
+        CameraRotation camRotation = FindObjectOfType<CameraRotation>();
+        camRotation?.SetCursorLock(enabled);
+
+        if (!enabled && currentInteractable != null)
+        {
+            currentInteractable.DisableOutline();
+            currentInteractable = null;
+        }
+    }
+
     void Update()
     {
         HandleInteraction();
+        // ▼ Removed the dialogue progression check entirely ▼
+        // Dialogue progression is now fully handled by DialogueManager's Update()
     }
 
     void HandleInteraction()
@@ -24,6 +51,11 @@ public class PlayerInteraction : MonoBehaviour
             UpdateCurrentInteractable(detectedInteractable);
         }
 
+        if (interactionEnabled) HandleInput();
+    }
+
+    void HandleInput()
+    {
         if (Input.GetMouseButtonDown(1) && pickupController.IsHoldingSomething())
         {
             pickupController.Drop();
@@ -34,12 +66,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (currentInteractable.IsPickable)
             {
-                if (pickupController.IsHoldingSomething())
-                {
-                    pickupController.Drop(); // Optional: drop current to pick up another
-                }
-
-                pickupController.TryPickup(currentInteractable);
+                HandlePickup();
             }
             else
             {
@@ -48,32 +75,33 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
+    void HandlePickup()
+    {
+        if (pickupController.IsHoldingSomething())
+        {
+            pickupController.Drop();
+        }
+        pickupController.TryPickup(currentInteractable);
+    }
 
     Interactable DetectInteractable()
     {
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, playerReach))
+        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, playerReach))
         {
-            if (hit.collider.TryGetComponent(out Interactable interactable) && interactable.enabled)
+            if (hit.collider.TryGetComponent(out Interactable interactable))
             {
                 return interactable;
             }
+                
         }
-
         return null;
     }
 
     void UpdateCurrentInteractable(Interactable newInteractable)
     {
-        if (currentInteractable != null)
-        {
-            currentInteractable.DisableOutline();
-        }
-
+        currentInteractable?.DisableOutline();
         currentInteractable = newInteractable;
-
-        if (currentInteractable != null)
-        {
-            currentInteractable.EnableOutline();
-        }
+        currentInteractable?.EnableOutline();
     }
 }
