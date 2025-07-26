@@ -14,17 +14,15 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image npcPortrait;
     [SerializeField] private GameObject choicePanel;
     [SerializeField] private Button[] choiceButtons;
-    [SerializeField] private GameObject continuePrompt;
+    [SerializeField] private GameObject continuePrompt; // Assign in inspector
 
     [Header("Settings")]
     [SerializeField] private float textDisplaySpeed = 0.05f;
-    [SerializeField] private float autoAdvanceDelay = 3f;
 
     private bool isTyping = false;
     private string currentSentence;
     private VIDE_Assign currentDialogue;
     private Coroutine typingCoroutine;
-    private Coroutine autoAdvanceCoroutine;
 
     void Awake()
     {
@@ -32,30 +30,38 @@ public class DialogueManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            gameObject.SetActive(true); // Force active
             VD.LoadDialogues();
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
-    }
 
+        // Ensure canvas starts disabled
+        if (dialogueCanvas != null)
+            dialogueCanvas.SetActive(false);
+    }
     public void StartDialogue(VIDE_Assign dialogue)
     {
+        if (!this.enabled) // Double-check
+        {
+            this.enabled = true;
+        }
+
         currentDialogue = dialogue;
         dialogueCanvas.SetActive(true);
         VD.OnNodeChange += UpdateDialogueUI;
         VD.OnEnd += EndDialogue;
         VD.BeginDialogue(dialogue);
-        PlayerInteraction.Instance.SetInteractionEnabled(false);
+        PlayerInteraction.Instance?.SetInteractionEnabled(false);
     }
 
     private void UpdateDialogueUI(VD.NodeData data)
     {
         // Clear previous state
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-        if (autoAdvanceCoroutine != null) StopCoroutine(autoAdvanceCoroutine);
-
         isTyping = false;
         choicePanel.SetActive(false);
         continuePrompt.SetActive(false);
@@ -70,12 +76,6 @@ public class DialogueManager : MonoBehaviour
 
             // Set portrait
             npcPortrait.sprite = data.sprite != null ? data.sprite : currentDialogue.defaultNPCSprite;
-
-            // Auto-advance if not paused
-            if (!data.pausedAction)
-            {
-                autoAdvanceCoroutine = StartCoroutine(AutoAdvance());
-            }
         }
         // Handle player choices
         else
@@ -96,25 +96,16 @@ public class DialogueManager : MonoBehaviour
         }
 
         isTyping = false;
-        continuePrompt.SetActive(true);
-    }
-
-    private IEnumerator AutoAdvance()
-    {
-        yield return new WaitUntil(() => !isTyping);
-        yield return new WaitForSeconds(autoAdvanceDelay);
-        VD.Next();
+        continuePrompt.SetActive(true); // Show prompt when done typing
     }
 
     private void SetupChoices(string[] choices)
     {
         choicePanel.SetActive(true);
 
-        // Hide all buttons first
         foreach (Button button in choiceButtons)
             button.gameObject.SetActive(false);
 
-        // Setup available choices
         for (int i = 0; i < choices.Length && i < choiceButtons.Length; i++)
         {
             choiceButtons[i].gameObject.SetActive(true);
@@ -131,6 +122,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (!VD.isActive) return;
 
+        // Skip typing animation if in progress
         if (isTyping)
         {
             StopCoroutine(typingCoroutine);
@@ -140,9 +132,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        // Only advance if we're on an NPC node and not showing choices
         if (!VD.nodeData.isPlayer && !VD.nodeData.pausedAction)
         {
-            if (autoAdvanceCoroutine != null) StopCoroutine(autoAdvanceCoroutine);
+            continuePrompt.SetActive(false); // Hide prompt before next line
             VD.Next();
         }
     }
@@ -164,9 +157,15 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
+        if (continuePrompt.activeSelf)
+        {
+            float scale = 1f + Mathf.PingPong(Time.time * 0.5f, 0.1f);
+            continuePrompt.transform.localScale = Vector3.one * scale;
+        }
+
         if (VD.isActive && Input.GetMouseButtonDown(0))
         {
-            AdvanceDialogue(); // Handles all click-to-continue logic
+            AdvanceDialogue();
         }
     }
 
