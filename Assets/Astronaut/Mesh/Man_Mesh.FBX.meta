@@ -1,145 +1,413 @@
 fileFormatVersion: 2
 guid: 966d3a66e6e70524a974fbbe5794cd5b
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Astronaut_Person_Body
-    100002: Astronaut_Person_Face_01
-    100004: Astronaut_Person_Face_02
-    100006: Astronaut_Person_Face_03
-    100008: Astronaut_Person_Hoses
-    100010: ball_l
-    100012: ball_r
-    100014: calf_l
-    100016: calf_r
-    100018: clavicle_l
-    100020: clavicle_r
-    100022: foot_l
-    100024: foot_r
-    100026: hand_l
-    100028: hand_r
-    100030: head
-    100032: index_01_l
-    100034: index_01_r
-    100036: index_02_l
-    100038: index_02_r
-    100040: index_03_l
-    100042: index_03_r
-    100044: lowerarm_l
-    100046: lowerarm_r
-    100048: lowerarm_twist_01_l
-    100050: lowerarm_twist_01_r
-    100052: //RootNode
-    100054: middle_01_l
-    100056: middle_01_r
-    100058: middle_02_l
-    100060: middle_02_r
-    100062: middle_03_l
-    100064: middle_03_r
-    100066: neck_01
-    100068: pelvis
-    100070: pinky_01_l
-    100072: pinky_01_r
-    100074: pinky_02_l
-    100076: pinky_02_r
-    100078: pinky_03_l
-    100080: pinky_03_r
-    100082: ring_01_l
-    100084: ring_01_r
-    100086: ring_02_l
-    100088: ring_02_r
-    100090: ring_03_l
-    100092: ring_03_r
-    100094: root
-    100096: spine_01
-    100098: spine_02
-    100100: spine_03
-    100102: thigh_l
-    100104: thigh_r
-    100106: thumb_01_l
-    100108: thumb_01_r
-    100110: thumb_02_l
-    100112: thumb_02_r
-    100114: thumb_03_l
-    100116: thumb_03_r
-    100118: upperarm_l
-    100120: upperarm_r
-    400000: Astronaut_Person_Body
-    400002: Astronaut_Person_Face_01
-    400004: Astronaut_Person_Face_02
-    400006: Astronaut_Person_Face_03
-    400008: Astronaut_Person_Hoses
-    400010: ball_l
-    400012: ball_r
-    400014: calf_l
-    400016: calf_r
-    400018: clavicle_l
-    400020: clavicle_r
-    400022: foot_l
-    400024: foot_r
-    400026: hand_l
-    400028: hand_r
-    400030: head
-    400032: index_01_l
-    400034: index_01_r
-    400036: index_02_l
-    400038: index_02_r
-    400040: index_03_l
-    400042: index_03_r
-    400044: lowerarm_l
-    400046: lowerarm_r
-    400048: lowerarm_twist_01_l
-    400050: lowerarm_twist_01_r
-    400052: //RootNode
-    400054: middle_01_l
-    400056: middle_01_r
-    400058: middle_02_l
-    400060: middle_02_r
-    400062: middle_03_l
-    400064: middle_03_r
-    400066: neck_01
-    400068: pelvis
-    400070: pinky_01_l
-    400072: pinky_01_r
-    400074: pinky_02_l
-    400076: pinky_02_r
-    400078: pinky_03_l
-    400080: pinky_03_r
-    400082: ring_01_l
-    400084: ring_01_r
-    400086: ring_02_l
-    400088: ring_02_r
-    400090: ring_03_l
-    400092: ring_03_r
-    400094: root
-    400096: spine_01
-    400098: spine_02
-    400100: spine_03
-    400102: thigh_l
-    400104: thigh_r
-    400106: thumb_01_l
-    400108: thumb_01_r
-    400110: thumb_02_l
-    400112: thumb_02_r
-    400114: thumb_03_l
-    400116: thumb_03_r
-    400118: upperarm_l
-    400120: upperarm_r
-    2100000: 07 - Default
-    4300000: Astronaut_Person_Body
-    4300002: Astronaut_Person_Hoses
-    4300004: Astronaut_Person_Face_01
-    4300006: Astronaut_Person_Face_03
-    4300008: Astronaut_Person_Face_02
-    9500000: //RootNode
-    13700000: Astronaut_Person_Body
-    13700002: Astronaut_Person_Face_01
-    13700004: Astronaut_Person_Face_02
-    13700006: Astronaut_Person_Face_03
-    13700008: Astronaut_Person_Hoses
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Astronaut_Person_Body
+  - first:
+      1: 100002
+    second: Astronaut_Person_Face_01
+  - first:
+      1: 100004
+    second: Astronaut_Person_Face_02
+  - first:
+      1: 100006
+    second: Astronaut_Person_Face_03
+  - first:
+      1: 100008
+    second: Astronaut_Person_Hoses
+  - first:
+      1: 100010
+    second: ball_l
+  - first:
+      1: 100012
+    second: ball_r
+  - first:
+      1: 100014
+    second: calf_l
+  - first:
+      1: 100016
+    second: calf_r
+  - first:
+      1: 100018
+    second: clavicle_l
+  - first:
+      1: 100020
+    second: clavicle_r
+  - first:
+      1: 100022
+    second: foot_l
+  - first:
+      1: 100024
+    second: foot_r
+  - first:
+      1: 100026
+    second: hand_l
+  - first:
+      1: 100028
+    second: hand_r
+  - first:
+      1: 100030
+    second: head
+  - first:
+      1: 100032
+    second: index_01_l
+  - first:
+      1: 100034
+    second: index_01_r
+  - first:
+      1: 100036
+    second: index_02_l
+  - first:
+      1: 100038
+    second: index_02_r
+  - first:
+      1: 100040
+    second: index_03_l
+  - first:
+      1: 100042
+    second: index_03_r
+  - first:
+      1: 100044
+    second: lowerarm_l
+  - first:
+      1: 100046
+    second: lowerarm_r
+  - first:
+      1: 100048
+    second: lowerarm_twist_01_l
+  - first:
+      1: 100050
+    second: lowerarm_twist_01_r
+  - first:
+      1: 100052
+    second: //RootNode
+  - first:
+      1: 100054
+    second: middle_01_l
+  - first:
+      1: 100056
+    second: middle_01_r
+  - first:
+      1: 100058
+    second: middle_02_l
+  - first:
+      1: 100060
+    second: middle_02_r
+  - first:
+      1: 100062
+    second: middle_03_l
+  - first:
+      1: 100064
+    second: middle_03_r
+  - first:
+      1: 100066
+    second: neck_01
+  - first:
+      1: 100068
+    second: pelvis
+  - first:
+      1: 100070
+    second: pinky_01_l
+  - first:
+      1: 100072
+    second: pinky_01_r
+  - first:
+      1: 100074
+    second: pinky_02_l
+  - first:
+      1: 100076
+    second: pinky_02_r
+  - first:
+      1: 100078
+    second: pinky_03_l
+  - first:
+      1: 100080
+    second: pinky_03_r
+  - first:
+      1: 100082
+    second: ring_01_l
+  - first:
+      1: 100084
+    second: ring_01_r
+  - first:
+      1: 100086
+    second: ring_02_l
+  - first:
+      1: 100088
+    second: ring_02_r
+  - first:
+      1: 100090
+    second: ring_03_l
+  - first:
+      1: 100092
+    second: ring_03_r
+  - first:
+      1: 100094
+    second: root
+  - first:
+      1: 100096
+    second: spine_01
+  - first:
+      1: 100098
+    second: spine_02
+  - first:
+      1: 100100
+    second: spine_03
+  - first:
+      1: 100102
+    second: thigh_l
+  - first:
+      1: 100104
+    second: thigh_r
+  - first:
+      1: 100106
+    second: thumb_01_l
+  - first:
+      1: 100108
+    second: thumb_01_r
+  - first:
+      1: 100110
+    second: thumb_02_l
+  - first:
+      1: 100112
+    second: thumb_02_r
+  - first:
+      1: 100114
+    second: thumb_03_l
+  - first:
+      1: 100116
+    second: thumb_03_r
+  - first:
+      1: 100118
+    second: upperarm_l
+  - first:
+      1: 100120
+    second: upperarm_r
+  - first:
+      4: 400000
+    second: Astronaut_Person_Body
+  - first:
+      4: 400002
+    second: Astronaut_Person_Face_01
+  - first:
+      4: 400004
+    second: Astronaut_Person_Face_02
+  - first:
+      4: 400006
+    second: Astronaut_Person_Face_03
+  - first:
+      4: 400008
+    second: Astronaut_Person_Hoses
+  - first:
+      4: 400010
+    second: ball_l
+  - first:
+      4: 400012
+    second: ball_r
+  - first:
+      4: 400014
+    second: calf_l
+  - first:
+      4: 400016
+    second: calf_r
+  - first:
+      4: 400018
+    second: clavicle_l
+  - first:
+      4: 400020
+    second: clavicle_r
+  - first:
+      4: 400022
+    second: foot_l
+  - first:
+      4: 400024
+    second: foot_r
+  - first:
+      4: 400026
+    second: hand_l
+  - first:
+      4: 400028
+    second: hand_r
+  - first:
+      4: 400030
+    second: head
+  - first:
+      4: 400032
+    second: index_01_l
+  - first:
+      4: 400034
+    second: index_01_r
+  - first:
+      4: 400036
+    second: index_02_l
+  - first:
+      4: 400038
+    second: index_02_r
+  - first:
+      4: 400040
+    second: index_03_l
+  - first:
+      4: 400042
+    second: index_03_r
+  - first:
+      4: 400044
+    second: lowerarm_l
+  - first:
+      4: 400046
+    second: lowerarm_r
+  - first:
+      4: 400048
+    second: lowerarm_twist_01_l
+  - first:
+      4: 400050
+    second: lowerarm_twist_01_r
+  - first:
+      4: 400052
+    second: //RootNode
+  - first:
+      4: 400054
+    second: middle_01_l
+  - first:
+      4: 400056
+    second: middle_01_r
+  - first:
+      4: 400058
+    second: middle_02_l
+  - first:
+      4: 400060
+    second: middle_02_r
+  - first:
+      4: 400062
+    second: middle_03_l
+  - first:
+      4: 400064
+    second: middle_03_r
+  - first:
+      4: 400066
+    second: neck_01
+  - first:
+      4: 400068
+    second: pelvis
+  - first:
+      4: 400070
+    second: pinky_01_l
+  - first:
+      4: 400072
+    second: pinky_01_r
+  - first:
+      4: 400074
+    second: pinky_02_l
+  - first:
+      4: 400076
+    second: pinky_02_r
+  - first:
+      4: 400078
+    second: pinky_03_l
+  - first:
+      4: 400080
+    second: pinky_03_r
+  - first:
+      4: 400082
+    second: ring_01_l
+  - first:
+      4: 400084
+    second: ring_01_r
+  - first:
+      4: 400086
+    second: ring_02_l
+  - first:
+      4: 400088
+    second: ring_02_r
+  - first:
+      4: 400090
+    second: ring_03_l
+  - first:
+      4: 400092
+    second: ring_03_r
+  - first:
+      4: 400094
+    second: root
+  - first:
+      4: 400096
+    second: spine_01
+  - first:
+      4: 400098
+    second: spine_02
+  - first:
+      4: 400100
+    second: spine_03
+  - first:
+      4: 400102
+    second: thigh_l
+  - first:
+      4: 400104
+    second: thigh_r
+  - first:
+      4: 400106
+    second: thumb_01_l
+  - first:
+      4: 400108
+    second: thumb_01_r
+  - first:
+      4: 400110
+    second: thumb_02_l
+  - first:
+      4: 400112
+    second: thumb_02_r
+  - first:
+      4: 400114
+    second: thumb_03_l
+  - first:
+      4: 400116
+    second: thumb_03_r
+  - first:
+      4: 400118
+    second: upperarm_l
+  - first:
+      4: 400120
+    second: upperarm_r
+  - first:
+      21: 2100000
+    second: 07 - Default
+  - first:
+      43: 4300000
+    second: Astronaut_Person_Body
+  - first:
+      43: 4300002
+    second: Astronaut_Person_Hoses
+  - first:
+      43: 4300004
+    second: Astronaut_Person_Face_01
+  - first:
+      43: 4300006
+    second: Astronaut_Person_Face_03
+  - first:
+      43: 4300008
+    second: Astronaut_Person_Face_02
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Astronaut_Person_Body
+  - first:
+      137: 13700002
+    second: Astronaut_Person_Face_01
+  - first:
+      137: 13700004
+    second: Astronaut_Person_Face_02
+  - first:
+      137: 13700006
+    second: Astronaut_Person_Face_03
+  - first:
+      137: 13700008
+    second: Astronaut_Person_Hoses
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -148,6 +416,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -172,25 +441,36 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -199,10 +479,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton:
     - name: Man_Mesh(Clone)
@@ -518,13 +798,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

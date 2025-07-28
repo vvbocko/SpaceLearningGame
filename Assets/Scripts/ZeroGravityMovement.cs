@@ -6,6 +6,7 @@ public class ZeroGravityMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private Animator playerAnimator;
 
     public Transform orientation;
 
@@ -27,6 +28,7 @@ public class ZeroGravityMovement : MonoBehaviour
     void Update()
     {
         HandleInput();
+        UpdateAnimation();
     }
 
     private void HandleInput()
@@ -40,6 +42,12 @@ public class ZeroGravityMovement : MonoBehaviour
 
         rigidBody.AddForce (moveDirection.normalized * moveSpeed, ForceMode.Force);
 
+    }
+
+    private void UpdateAnimation()
+    {
+        bool isMoving = rigidBody.velocity.magnitude > 0.1f;
+        playerAnimator.SetBool("IsMoving", isMoving);
     }
 
 }
