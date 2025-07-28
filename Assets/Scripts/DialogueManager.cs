@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour
         // Ensure canvas starts disabled
         if (dialogueCanvas != null)
             dialogueCanvas.SetActive(false);
-    }
+    } 
     public void StartDialogue(VIDE_Assign dialogue)
     {
         if (!this.enabled) // Double-check
