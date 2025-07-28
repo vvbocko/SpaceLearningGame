@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class FixingMiniGame : MonoBehaviour
 {
+    [SerializeField] private GameObject fishingMiniGameUI;
+    [SerializeField] private GameObject interactableBox;
     [SerializeField] private Scrollbar playerBar;
     [SerializeField] private Scrollbar fishBar;
     [SerializeField] private Slider progressBar;
@@ -27,6 +29,9 @@ public class FixingMiniGame : MonoBehaviour
 
     void Start()
     {
+        interactableBox.GetComponent<Interactable>().enabled = true;
+        DisableUI();
+        //set canvas component active = false; -- aditional method for start and end handle mechanic 
         playerHandle = playerBar.handleRect;
         fishHandle = fishBar.handleRect;
 
@@ -85,6 +90,10 @@ public class FixingMiniGame : MonoBehaviour
     }
     private void HandleProgressBar()
     {
+        if(progressBar.value >= 1f)
+        {
+            DisableUI();
+        }
         if (IsOverlapping())
         {
             progressBar.value += Time.deltaTime * progressSpeed;
@@ -113,6 +122,28 @@ public class FixingMiniGame : MonoBehaviour
         float yMax = corners[2].y;
 
         return new Rect(xMin, yMin, xMax - xMin, yMax - yMin);
+    }
+
+    private void DisableUI()
+    {
+        progressBar.value = 0;
+
+        fishingMiniGameUI.SetActive(false);
+        playerBar.enabled = false;
+        fishBar.enabled = false;
+        progressBar.enabled = false;
+    }
+    public void EnableUI()
+    {
+        fishingMiniGameUI.SetActive(true);
+        playerBar.enabled = true;
+        fishBar.enabled = true;
+        progressBar.enabled = true;
+    }
+
+    private void MakeUninteractable()
+    {
+        interactableBox.GetComponent<Interactable>().enabled = false;
     }
 
 }
