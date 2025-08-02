@@ -1,186 +1,536 @@
 fileFormatVersion: 2
 guid: 0f566b4e2671cac4d9d50104c2b7aca9
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Astronaut_Backpack_Mesh
-    100004: Astronaut_Body_Detail_Mesh
-    100006: Astronaut_Body_Details_02_Mesh
-    100008: Astronaut_Body_Details_03_Mesh
-    100010: Astronaut_Body_Mesh
-    100012: Astronaut_Glasses_02_Mesh
-    100014: Astronaut_Glasses_03_Mesh
-    100016: Astronaut_Glasses_04_Mesh
-    100018: Astronaut_Gloves_Mesh
-    100020: Astronaut_Helmet_Mesh
-    100022: Astronaut_Hoses_Mesh
-    100024: Astronaut_light_Mesh
-    100026: Astronaut_Shoes_Mesh
-    100028: Astronaut_Watchs_Mesh
-    100030: ball_l
-    100032: ball_r
-    100034: calf_l
-    100036: calf_r
-    100038: clavicle_l
-    100040: clavicle_r
-    100042: foot_l
-    100044: foot_r
-    100046: hand_l
-    100048: hand_r
-    100050: head
-    100052: index_01_l
-    100054: index_01_r
-    100056: index_02_l
-    100058: index_02_r
-    100060: index_03_l
-    100062: index_03_r
-    100064: lowerarm_l
-    100066: lowerarm_r
-    100068: lowerarm_twist_01_l
-    100070: lowerarm_twist_01_r
-    100072: middle_01_l
-    100074: middle_01_r
-    100076: middle_02_l
-    100078: middle_02_r
-    100080: middle_03_l
-    100082: middle_03_r
-    100084: neck_01
-    100086: Object001
-    100088: pelvis
-    100090: pinky_01_l
-    100092: pinky_01_r
-    100094: pinky_02_l
-    100096: pinky_02_r
-    100098: pinky_03_l
-    100100: pinky_03_r
-    100102: ring_01_l
-    100104: ring_01_r
-    100106: ring_02_l
-    100108: ring_02_r
-    100110: ring_03_l
-    100112: ring_03_r
-    100114: root
-    100116: spine_01
-    100118: spine_02
-    100120: spine_03
-    100122: thigh_l
-    100124: thigh_r
-    100126: thumb_01_l
-    100128: thumb_01_r
-    100130: thumb_02_l
-    100132: thumb_02_r
-    100134: thumb_03_l
-    100136: thumb_03_r
-    100138: upperarm_l
-    100140: upperarm_r
-    400000: //RootNode
-    400002: Astronaut_Backpack_Mesh
-    400004: Astronaut_Body_Detail_Mesh
-    400006: Astronaut_Body_Details_02_Mesh
-    400008: Astronaut_Body_Details_03_Mesh
-    400010: Astronaut_Body_Mesh
-    400012: Astronaut_Glasses_02_Mesh
-    400014: Astronaut_Glasses_03_Mesh
-    400016: Astronaut_Glasses_04_Mesh
-    400018: Astronaut_Gloves_Mesh
-    400020: Astronaut_Helmet_Mesh
-    400022: Astronaut_Hoses_Mesh
-    400024: Astronaut_light_Mesh
-    400026: Astronaut_Shoes_Mesh
-    400028: Astronaut_Watchs_Mesh
-    400030: ball_l
-    400032: ball_r
-    400034: calf_l
-    400036: calf_r
-    400038: clavicle_l
-    400040: clavicle_r
-    400042: foot_l
-    400044: foot_r
-    400046: hand_l
-    400048: hand_r
-    400050: head
-    400052: index_01_l
-    400054: index_01_r
-    400056: index_02_l
-    400058: index_02_r
-    400060: index_03_l
-    400062: index_03_r
-    400064: lowerarm_l
-    400066: lowerarm_r
-    400068: lowerarm_twist_01_l
-    400070: lowerarm_twist_01_r
-    400072: middle_01_l
-    400074: middle_01_r
-    400076: middle_02_l
-    400078: middle_02_r
-    400080: middle_03_l
-    400082: middle_03_r
-    400084: neck_01
-    400086: Object001
-    400088: pelvis
-    400090: pinky_01_l
-    400092: pinky_01_r
-    400094: pinky_02_l
-    400096: pinky_02_r
-    400098: pinky_03_l
-    400100: pinky_03_r
-    400102: ring_01_l
-    400104: ring_01_r
-    400106: ring_02_l
-    400108: ring_02_r
-    400110: ring_03_l
-    400112: ring_03_r
-    400114: root
-    400116: spine_01
-    400118: spine_02
-    400120: spine_03
-    400122: thigh_l
-    400124: thigh_r
-    400126: thumb_01_l
-    400128: thumb_01_r
-    400130: thumb_02_l
-    400132: thumb_02_r
-    400134: thumb_03_l
-    400136: thumb_03_r
-    400138: upperarm_l
-    400140: upperarm_r
-    2100000: Astronaut
-    4300000: Astronaut_Body_Mesh
-    4300002: Astronaut_Gloves_Mesh
-    4300004: Astronaut_Shoes_Mesh
-    4300006: Astronaut_Watchs_Mesh
-    4300008: Astronaut_Body_Detail_Mesh
-    4300010: Astronaut_Helmet_Mesh
-    4300012: Astronaut_Glasses_02_Mesh
-    4300014: Astronaut_Backpack_Mesh
-    4300016: Astronaut_light_Mesh
-    4300018: Astronaut_Glasses_03_Mesh
-    4300020: Astronaut_Glasses_04_Mesh
-    4300022: Astronaut_Hoses_Mesh
-    4300024: Astronaut_Body_Details_02_Mesh
-    4300026: Astronaut_Body_Details_03_Mesh
-    4300028: Object001
-    7400000: Take 001
-    9500000: //RootNode
-    13700000: Astronaut_Backpack_Mesh
-    13700002: Astronaut_Body_Detail_Mesh
-    13700004: Astronaut_Body_Details_02_Mesh
-    13700006: Astronaut_Body_Details_03_Mesh
-    13700008: Astronaut_Body_Mesh
-    13700010: Astronaut_Glasses_02_Mesh
-    13700012: Astronaut_Glasses_03_Mesh
-    13700014: Astronaut_Glasses_04_Mesh
-    13700016: Astronaut_Gloves_Mesh
-    13700018: Astronaut_Helmet_Mesh
-    13700020: Astronaut_Hoses_Mesh
-    13700022: Astronaut_light_Mesh
-    13700024: Astronaut_Shoes_Mesh
-    13700026: Astronaut_Watchs_Mesh
-    13700028: Object001
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Astronaut_Backpack_Mesh
+  - first:
+      1: 100004
+    second: Astronaut_Body_Detail_Mesh
+  - first:
+      1: 100006
+    second: Astronaut_Body_Details_02_Mesh
+  - first:
+      1: 100008
+    second: Astronaut_Body_Details_03_Mesh
+  - first:
+      1: 100010
+    second: Astronaut_Body_Mesh
+  - first:
+      1: 100012
+    second: Astronaut_Glasses_02_Mesh
+  - first:
+      1: 100014
+    second: Astronaut_Glasses_03_Mesh
+  - first:
+      1: 100016
+    second: Astronaut_Glasses_04_Mesh
+  - first:
+      1: 100018
+    second: Astronaut_Gloves_Mesh
+  - first:
+      1: 100020
+    second: Astronaut_Helmet_Mesh
+  - first:
+      1: 100022
+    second: Astronaut_Hoses_Mesh
+  - first:
+      1: 100024
+    second: Astronaut_light_Mesh
+  - first:
+      1: 100026
+    second: Astronaut_Shoes_Mesh
+  - first:
+      1: 100028
+    second: Astronaut_Watchs_Mesh
+  - first:
+      1: 100030
+    second: ball_l
+  - first:
+      1: 100032
+    second: ball_r
+  - first:
+      1: 100034
+    second: calf_l
+  - first:
+      1: 100036
+    second: calf_r
+  - first:
+      1: 100038
+    second: clavicle_l
+  - first:
+      1: 100040
+    second: clavicle_r
+  - first:
+      1: 100042
+    second: foot_l
+  - first:
+      1: 100044
+    second: foot_r
+  - first:
+      1: 100046
+    second: hand_l
+  - first:
+      1: 100048
+    second: hand_r
+  - first:
+      1: 100050
+    second: head
+  - first:
+      1: 100052
+    second: index_01_l
+  - first:
+      1: 100054
+    second: index_01_r
+  - first:
+      1: 100056
+    second: index_02_l
+  - first:
+      1: 100058
+    second: index_02_r
+  - first:
+      1: 100060
+    second: index_03_l
+  - first:
+      1: 100062
+    second: index_03_r
+  - first:
+      1: 100064
+    second: lowerarm_l
+  - first:
+      1: 100066
+    second: lowerarm_r
+  - first:
+      1: 100068
+    second: lowerarm_twist_01_l
+  - first:
+      1: 100070
+    second: lowerarm_twist_01_r
+  - first:
+      1: 100072
+    second: middle_01_l
+  - first:
+      1: 100074
+    second: middle_01_r
+  - first:
+      1: 100076
+    second: middle_02_l
+  - first:
+      1: 100078
+    second: middle_02_r
+  - first:
+      1: 100080
+    second: middle_03_l
+  - first:
+      1: 100082
+    second: middle_03_r
+  - first:
+      1: 100084
+    second: neck_01
+  - first:
+      1: 100086
+    second: Object001
+  - first:
+      1: 100088
+    second: pelvis
+  - first:
+      1: 100090
+    second: pinky_01_l
+  - first:
+      1: 100092
+    second: pinky_01_r
+  - first:
+      1: 100094
+    second: pinky_02_l
+  - first:
+      1: 100096
+    second: pinky_02_r
+  - first:
+      1: 100098
+    second: pinky_03_l
+  - first:
+      1: 100100
+    second: pinky_03_r
+  - first:
+      1: 100102
+    second: ring_01_l
+  - first:
+      1: 100104
+    second: ring_01_r
+  - first:
+      1: 100106
+    second: ring_02_l
+  - first:
+      1: 100108
+    second: ring_02_r
+  - first:
+      1: 100110
+    second: ring_03_l
+  - first:
+      1: 100112
+    second: ring_03_r
+  - first:
+      1: 100114
+    second: root
+  - first:
+      1: 100116
+    second: spine_01
+  - first:
+      1: 100118
+    second: spine_02
+  - first:
+      1: 100120
+    second: spine_03
+  - first:
+      1: 100122
+    second: thigh_l
+  - first:
+      1: 100124
+    second: thigh_r
+  - first:
+      1: 100126
+    second: thumb_01_l
+  - first:
+      1: 100128
+    second: thumb_01_r
+  - first:
+      1: 100130
+    second: thumb_02_l
+  - first:
+      1: 100132
+    second: thumb_02_r
+  - first:
+      1: 100134
+    second: thumb_03_l
+  - first:
+      1: 100136
+    second: thumb_03_r
+  - first:
+      1: 100138
+    second: upperarm_l
+  - first:
+      1: 100140
+    second: upperarm_r
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Astronaut_Backpack_Mesh
+  - first:
+      4: 400004
+    second: Astronaut_Body_Detail_Mesh
+  - first:
+      4: 400006
+    second: Astronaut_Body_Details_02_Mesh
+  - first:
+      4: 400008
+    second: Astronaut_Body_Details_03_Mesh
+  - first:
+      4: 400010
+    second: Astronaut_Body_Mesh
+  - first:
+      4: 400012
+    second: Astronaut_Glasses_02_Mesh
+  - first:
+      4: 400014
+    second: Astronaut_Glasses_03_Mesh
+  - first:
+      4: 400016
+    second: Astronaut_Glasses_04_Mesh
+  - first:
+      4: 400018
+    second: Astronaut_Gloves_Mesh
+  - first:
+      4: 400020
+    second: Astronaut_Helmet_Mesh
+  - first:
+      4: 400022
+    second: Astronaut_Hoses_Mesh
+  - first:
+      4: 400024
+    second: Astronaut_light_Mesh
+  - first:
+      4: 400026
+    second: Astronaut_Shoes_Mesh
+  - first:
+      4: 400028
+    second: Astronaut_Watchs_Mesh
+  - first:
+      4: 400030
+    second: ball_l
+  - first:
+      4: 400032
+    second: ball_r
+  - first:
+      4: 400034
+    second: calf_l
+  - first:
+      4: 400036
+    second: calf_r
+  - first:
+      4: 400038
+    second: clavicle_l
+  - first:
+      4: 400040
+    second: clavicle_r
+  - first:
+      4: 400042
+    second: foot_l
+  - first:
+      4: 400044
+    second: foot_r
+  - first:
+      4: 400046
+    second: hand_l
+  - first:
+      4: 400048
+    second: hand_r
+  - first:
+      4: 400050
+    second: head
+  - first:
+      4: 400052
+    second: index_01_l
+  - first:
+      4: 400054
+    second: index_01_r
+  - first:
+      4: 400056
+    second: index_02_l
+  - first:
+      4: 400058
+    second: index_02_r
+  - first:
+      4: 400060
+    second: index_03_l
+  - first:
+      4: 400062
+    second: index_03_r
+  - first:
+      4: 400064
+    second: lowerarm_l
+  - first:
+      4: 400066
+    second: lowerarm_r
+  - first:
+      4: 400068
+    second: lowerarm_twist_01_l
+  - first:
+      4: 400070
+    second: lowerarm_twist_01_r
+  - first:
+      4: 400072
+    second: middle_01_l
+  - first:
+      4: 400074
+    second: middle_01_r
+  - first:
+      4: 400076
+    second: middle_02_l
+  - first:
+      4: 400078
+    second: middle_02_r
+  - first:
+      4: 400080
+    second: middle_03_l
+  - first:
+      4: 400082
+    second: middle_03_r
+  - first:
+      4: 400084
+    second: neck_01
+  - first:
+      4: 400086
+    second: Object001
+  - first:
+      4: 400088
+    second: pelvis
+  - first:
+      4: 400090
+    second: pinky_01_l
+  - first:
+      4: 400092
+    second: pinky_01_r
+  - first:
+      4: 400094
+    second: pinky_02_l
+  - first:
+      4: 400096
+    second: pinky_02_r
+  - first:
+      4: 400098
+    second: pinky_03_l
+  - first:
+      4: 400100
+    second: pinky_03_r
+  - first:
+      4: 400102
+    second: ring_01_l
+  - first:
+      4: 400104
+    second: ring_01_r
+  - first:
+      4: 400106
+    second: ring_02_l
+  - first:
+      4: 400108
+    second: ring_02_r
+  - first:
+      4: 400110
+    second: ring_03_l
+  - first:
+      4: 400112
+    second: ring_03_r
+  - first:
+      4: 400114
+    second: root
+  - first:
+      4: 400116
+    second: spine_01
+  - first:
+      4: 400118
+    second: spine_02
+  - first:
+      4: 400120
+    second: spine_03
+  - first:
+      4: 400122
+    second: thigh_l
+  - first:
+      4: 400124
+    second: thigh_r
+  - first:
+      4: 400126
+    second: thumb_01_l
+  - first:
+      4: 400128
+    second: thumb_01_r
+  - first:
+      4: 400130
+    second: thumb_02_l
+  - first:
+      4: 400132
+    second: thumb_02_r
+  - first:
+      4: 400134
+    second: thumb_03_l
+  - first:
+      4: 400136
+    second: thumb_03_r
+  - first:
+      4: 400138
+    second: upperarm_l
+  - first:
+      4: 400140
+    second: upperarm_r
+  - first:
+      21: 2100000
+    second: Astronaut
+  - first:
+      43: 4300000
+    second: Astronaut_Body_Mesh
+  - first:
+      43: 4300002
+    second: Astronaut_Gloves_Mesh
+  - first:
+      43: 4300004
+    second: Astronaut_Shoes_Mesh
+  - first:
+      43: 4300006
+    second: Astronaut_Watchs_Mesh
+  - first:
+      43: 4300008
+    second: Astronaut_Body_Detail_Mesh
+  - first:
+      43: 4300010
+    second: Astronaut_Helmet_Mesh
+  - first:
+      43: 4300012
+    second: Astronaut_Glasses_02_Mesh
+  - first:
+      43: 4300014
+    second: Astronaut_Backpack_Mesh
+  - first:
+      43: 4300016
+    second: Astronaut_light_Mesh
+  - first:
+      43: 4300018
+    second: Astronaut_Glasses_03_Mesh
+  - first:
+      43: 4300020
+    second: Astronaut_Glasses_04_Mesh
+  - first:
+      43: 4300022
+    second: Astronaut_Hoses_Mesh
+  - first:
+      43: 4300024
+    second: Astronaut_Body_Details_02_Mesh
+  - first:
+      43: 4300026
+    second: Astronaut_Body_Details_03_Mesh
+  - first:
+      43: 4300028
+    second: Object001
+  - first:
+      74: 7400000
+    second: Fly_02
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Astronaut_Backpack_Mesh
+  - first:
+      137: 13700002
+    second: Astronaut_Body_Detail_Mesh
+  - first:
+      137: 13700004
+    second: Astronaut_Body_Details_02_Mesh
+  - first:
+      137: 13700006
+    second: Astronaut_Body_Details_03_Mesh
+  - first:
+      137: 13700008
+    second: Astronaut_Body_Mesh
+  - first:
+      137: 13700010
+    second: Astronaut_Glasses_02_Mesh
+  - first:
+      137: 13700012
+    second: Astronaut_Glasses_03_Mesh
+  - first:
+      137: 13700014
+    second: Astronaut_Glasses_04_Mesh
+  - first:
+      137: 13700016
+    second: Astronaut_Gloves_Mesh
+  - first:
+      137: 13700018
+    second: Astronaut_Helmet_Mesh
+  - first:
+      137: 13700020
+    second: Astronaut_Hoses_Mesh
+  - first:
+      137: 13700022
+    second: Astronaut_light_Mesh
+  - first:
+      137: 13700024
+    second: Astronaut_Shoes_Mesh
+  - first:
+      137: 13700026
+    second: Astronaut_Watchs_Mesh
+  - first:
+      137: 13700028
+    second: Object001
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -189,8 +539,10 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Head' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -198,14 +550,43 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 0
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Fly_02
+      takeName: Take 001
+      internalID: 7400000
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -213,25 +594,36 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -240,12 +632,367 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Astronaut@Fly_02(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: root
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pelvis
+      parentName: root
+      position: {x: -1.3536842e-30, y: 0.010561532, z: 0.967506}
+      rotation: {x: 0.0012852252, y: 0.70710564, z: 0.0012852252, w: 0.70710564}
+      scale: {x: 1.0000012, y: 1.0000013, z: 1.0000007}
+    - name: spine_01
+      parentName: pelvis
+      position: {x: -0.10808876, y: -0.008514151, z: -6.07514e-15}
+      rotation: {x: -2.3283062e-10, y: -0, z: 0.06238852, w: 0.99805194}
+      scale: {x: 1, y: 1, z: 1.0000004}
+    - name: spine_02
+      parentName: spine_01
+      position: {x: -0.1887535, y: 0.03801159, z: 5.966093e-10}
+      rotation: {x: 0.00000004002692, y: -0.000000002530653, z: 0.122419685, w: -0.99247843}
+      scale: {x: 1.0000013, y: 1.0000013, z: 1.0000017}
+    - name: spine_03
+      parentName: spine_02
+      position: {x: -0.13407333, y: 0.0042047594, z: -5.542233e-15}
+      rotation: {x: 0.000000057333853, y: 0.0000000044414192, z: -0.02425256, w: 0.9997059}
+      scale: {x: 1.0000039, y: 1.0000043, z: 1.0000018}
+    - name: neck_01
+      parentName: spine_03
+      position: {x: -0.16558777, y: -0.0035531616, z: -5.965974e-10}
+      rotation: {x: 0.000000041484896, y: -0.0000000063166348, z: -0.20371069, w: -0.9790311}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: head
+      parentName: neck_01
+      position: {x: -0.092836, y: 0.0036415863, z: 1.7763568e-17}
+      rotation: {x: -0.000000005681933, y: 0.0000000323584, z: 0.13354188, w: -0.9910432}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000018}
+    - name: clavicle_l
+      parentName: spine_03
+      position: {x: -0.11883682, y: -0.027320862, z: -0.03781983}
+      rotation: {x: -0.15407038, y: 0.72627765, z: 0.06670455, w: -0.6665836}
+      scale: {x: 0.9999996, y: 1.0000014, z: 1.0000012}
+    - name: upperarm_l
+      parentName: clavicle_l
+      position: {x: -0.1578487, y: 0.000000004172325, z: 0.00000015258789}
+      rotation: {x: 0.05995951, y: 0.037411734, z: 0.15131569, w: 0.98595583}
+      scale: {x: 0.9999996, y: 0.9999997, z: 1.000001}
+    - name: lowerarm_l
+      parentName: upperarm_l
+      position: {x: -0.3033992, y: 0, z: -0.000000076293944}
+      rotation: {x: -0.061964884, y: 0.029635357, z: 0.027704813, w: 0.99725354}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
+    - name: hand_l
+      parentName: lowerarm_l
+      position: {x: -0.26975143, y: 0.000000038146972, z: -0.000000076293944}
+      rotation: {x: 0.61934066, y: 0.038887884, z: -0.049042307, w: -0.78262365}
+      scale: {x: 1.0000005, y: 1.0000018, z: 1.0000017}
+    - name: pinky_01_l
+      parentName: hand_l
+      position: {x: -0.10140659, y: 0.02263153, z: 0.046431463}
+      rotation: {x: -0.12622291, y: 0.09622891, z: -0.0765914, w: 0.9843483}
+      scale: {x: 1.0000008, y: 1.0000002, z: 1.0000005}
+    - name: pinky_02_l
+      parentName: pinky_01_l
+      position: {x: -0.035709724, y: 0.000000076293944, z: 0.000000009536743}
+      rotation: {x: 0.010402405, y: 0.004139786, z: -0.038472988, w: 0.99919695}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000001}
+    - name: pinky_03_l
+      parentName: pinky_02_l
+      position: {x: -0.029856337, y: 0, z: 0.000000009536743}
+      rotation: {x: 0.0035808831, y: -0.033796404, z: -0.008930415, w: 0.9993825}
+      scale: {x: 0.9999997, y: 0.99999934, z: 1.0000002}
+    - name: ring_01_l
+      parentName: hand_l
+      position: {x: -0.11497875, y: 0.017535323, z: 0.028469123}
+      rotation: {x: -0.088309415, y: 0.08255481, z: -0.10351232, w: 0.9872545}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000007}
+    - name: ring_02_l
+      parentName: ring_01_l
+      position: {x: -0.044301834, y: 0, z: 0}
+      rotation: {x: 0.004327718, y: 0.0045781992, z: -0.037467785, w: 0.999278}
+      scale: {x: 0.9999998, y: 0.99999994, z: 1.0000001}
+    - name: ring_03_l
+      parentName: ring_02_l
+      position: {x: -0.03476654, y: 0.00000015258789, z: -0.000000009536743}
+      rotation: {x: -0.00019892624, y: -0.026257599, z: 0.11221294, w: 0.99333715}
+      scale: {x: 1.0000005, y: 1, z: 1.0000001}
+    - name: middle_01_l
+      parentName: hand_l
+      position: {x: -0.12244281, y: 0.012936478, z: 0.005711651}
+      rotation: {x: 0.0294861, y: 0.040344786, z: -0.13033068, w: 0.9902105}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.0000006}
+    - name: middle_02_l
+      parentName: middle_01_l
+      position: {x: -0.046403654, y: 0, z: -0.000000019073486}
+      rotation: {x: -0.018723741, y: -0.0028371683, z: -0.038124613, w: 0.99909353}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000004}
+    - name: middle_03_l
+      parentName: middle_02_l
+      position: {x: -0.036488418, y: 0.000000076293944, z: -0.000000009536743}
+      rotation: {x: 0.0016214395, y: 0.038866963, z: 0.13362375, w: 0.9902684}
+      scale: {x: 1.0000004, y: 0.9999998, z: 0.9999998}
+    - name: index_01_l
+      parentName: hand_l
+      position: {x: -0.12068107, y: 0.017634582, z: -0.02109394}
+      rotation: {x: 0.11836813, y: -0.023820827, z: -0.119367436, w: 0.98548114}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000008}
+    - name: index_02_l
+      parentName: index_01_l
+      position: {x: -0.04287502, y: 0, z: -0.000000038146972}
+      rotation: {x: 0.012100689, y: 0.0010670753, z: -0.038362384, w: 0.9991901}
+      scale: {x: 0.9999997, y: 0.9999997, z: 0.9999996}
+    - name: index_03_l
+      parentName: index_02_l
+      position: {x: -0.033937912, y: 0, z: 0}
+      rotation: {x: 0.010611094, y: -0.007850785, z: 0.08285495, w: 0.99647427}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: thumb_01_l
+      parentName: hand_l
+      position: {x: -0.047620315, y: 0.02374977, z: -0.025378188}
+      rotation: {x: -0.60075164, y: 0.3004921, z: -0.18455528, w: -0.7174548}
+      scale: {x: 1.0000001, y: 1.000001, z: 1.0000002}
+    - name: thumb_02_l
+      parentName: thumb_01_l
+      position: {x: -0.038696706, y: 0.000000038146972, z: -0.000000076293944}
+      rotation: {x: 0.00263506, y: -0.019817907, z: -0.029712092, w: 0.99935853}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999998}
+    - name: thumb_03_l
+      parentName: thumb_02_l
+      position: {x: -0.04062172, y: -0.000000057220458, z: 0.000000076293944}
+      rotation: {x: 0.021399051, y: -0.001883395, z: 0.10793746, w: 0.99392563}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: lowerarm_twist_01_l
+      parentName: lowerarm_l
+      position: {x: -0.14, y: 0.000000038146972, z: -0.000000076293944}
+      rotation: {x: 0.0000000372529, y: -0, z: 0.000000004190951, w: 1}
+      scale: {x: 1.0000008, y: 1.000002, z: 1.0000021}
+    - name: clavicle_r
+      parentName: spine_03
+      position: {x: -0.11883774, y: -0.027321015, z: 0.037820026}
+      rotation: {x: -0.7262776, y: -0.15407017, z: -0.66658366, w: -0.066704184}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000002}
+    - name: upperarm_r
+      parentName: clavicle_r
+      position: {x: 0.15784802, y: -0.000000067949294, z: -0.00000030517577}
+      rotation: {x: 0.059959386, y: 0.037411306, z: 0.1513158, w: 0.98595583}
+      scale: {x: 0.99999994, y: 1.0000011, z: 1.0000002}
+    - name: lowerarm_r
+      parentName: upperarm_r
+      position: {x: 0.3034005, y: -0.000000038146972, z: 0}
+      rotation: {x: -0.06196489, y: 0.029635347, z: 0.02770413, w: 0.99725354}
+      scale: {x: 1.0000005, y: 0.99999934, z: 1.000001}
+    - name: hand_r
+      parentName: lowerarm_r
+      position: {x: 0.26975247, y: 0.0000002479553, z: 0}
+      rotation: {x: -0.6193406, y: -0.03888777, z: 0.04904239, w: 0.78262365}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: pinky_01_r
+      parentName: hand_r
+      position: {x: 0.10140587, y: -0.022633513, z: -0.04643093}
+      rotation: {x: -0.12622601, y: 0.09622774, z: -0.07658803, w: 0.98434824}
+      scale: {x: 1.0000002, y: 1, z: 0.9999998}
+    - name: pinky_02_r
+      parentName: pinky_01_r
+      position: {x: 0.035710562, y: -0.0000006866455, z: -0.000000085830685}
+      rotation: {x: 0.010402907, y: 0.00413975, z: -0.038532868, w: 0.99919456}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: pinky_03_r
+      parentName: pinky_02_r
+      position: {x: 0.029854277, y: 0.0000032043456, z: -0.00000036239624}
+      rotation: {x: 0.0035810564, y: -0.033796363, z: -0.008930341, w: 0.99938244}
+      scale: {x: 1.000001, y: 1.0000006, z: 1}
+    - name: ring_01_r
+      parentName: hand_r
+      position: {x: 0.114979625, y: -0.017537689, z: -0.028469123}
+      rotation: {x: -0.08830908, y: 0.082556084, z: -0.10352509, w: 0.98725307}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999998}
+    - name: ring_02_r
+      parentName: ring_01_r
+      position: {x: 0.04429863, y: 0.0000007629394, z: -0.00000018119812}
+      rotation: {x: 0.00432807, y: 0.0045791767, z: -0.03747281, w: 0.99927783}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: ring_03_r
+      parentName: ring_02_r
+      position: {x: 0.034766614, y: 0.0000007629394, z: -0.000000028610229}
+      rotation: {x: -0.00019907755, y: -0.026257811, z: 0.112212785, w: 0.99333715}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1}
+    - name: middle_01_r
+      parentName: hand_r
+      position: {x: 0.1224411, y: -0.012937317, z: -0.005711288}
+      rotation: {x: 0.02948578, y: 0.040343456, z: -0.13031983, w: 0.990212}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: middle_02_r
+      parentName: middle_01_r
+      position: {x: 0.04640564, y: -0.000001373291, z: 0.000000076293944}
+      rotation: {x: -0.018723566, y: -0.0028380214, z: -0.0381442, w: 0.9990928}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: middle_03_r
+      parentName: middle_02_r
+      position: {x: 0.03648918, y: 0.0000003814697, z: -0.000000019073486}
+      rotation: {x: 0.0016214076, y: 0.03886712, z: 0.1336236, w: 0.99026835}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+    - name: index_01_r
+      parentName: hand_r
+      position: {x: 0.12067932, y: -0.01763733, z: 0.021094283}
+      rotation: {x: 0.116834715, y: -0.025500217, z: -0.11787753, w: 0.9858014}
+      scale: {x: 0.9999998, y: 0.99999994, z: 1.0000002}
+    - name: index_02_r
+      parentName: index_01_r
+      position: {x: 0.04287689, y: 0.0000009155273, z: -0.00000074386594}
+      rotation: {x: 0.01210166, y: 0.0010704356, z: -0.038372383, w: 0.9991897}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: index_03_r
+      parentName: index_02_r
+      position: {x: 0.033937987, y: 0.0000012969971, z: -0.0000001335144}
+      rotation: {x: 0.010611072, y: -0.007850826, z: 0.082855076, w: 0.9964742}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: thumb_01_r
+      parentName: hand_r
+      position: {x: 0.04762119, y: -0.02375122, z: 0.025378017}
+      rotation: {x: 0.6007525, y: -0.3004877, z: 0.18454722, w: 0.717458}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000001}
+    - name: thumb_02_r
+      parentName: thumb_01_r
+      position: {x: 0.038695715, y: 0.0000011825562, z: 0.00000045776366}
+      rotation: {x: 0.0026338685, y: -0.019819027, z: -0.029698312, w: 0.999359}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: thumb_03_r
+      parentName: thumb_02_r
+      position: {x: 0.040621642, y: 0.000000038146972, z: 0}
+      rotation: {x: 0.02139905, y: -0.0018832383, z: 0.10793756, w: 0.9939256}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: lowerarm_twist_01_r
+      parentName: lowerarm_r
+      position: {x: 0.14, y: 0.00000022888183, z: -0.000000076293944}
+      rotation: {x: -0.11762716, y: -0.000000014901158, z: -0.000000013737004, w: 0.99305785}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000005}
+    - name: thigh_l
+      parentName: pelvis
+      position: {x: 0.014488372, y: -0.005314235, z: -0.090058096}
+      rotation: {x: 0.0737049, y: 0.06213882, z: 0.008584395, w: 0.9953053}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000012}
+    - name: calf_l
+      parentName: thigh_l
+      position: {x: 0.4257204, y: 0, z: 0}
+      rotation: {x: -0.048884295, y: -0.018863915, z: 0.06552211, w: 0.99647444}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: foot_l
+      parentName: calf_l
+      position: {x: 0.40196684, y: 0, z: -0.000000019073486}
+      rotation: {x: -0.0058861524, y: -0.031991217, z: -0.070354834, w: 0.9969916}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: ball_l
+      parentName: foot_l
+      position: {x: 0.10453836, y: -0.16577853, z: 0.00080156326}
+      rotation: {x: 0.00008039456, y: -0.000029921532, z: 0.7186339, w: 0.6953886}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: thigh_r
+      parentName: pelvis
+      position: {x: 0.014486541, y: -0.0053142747, z: 0.09005803}
+      rotation: {x: -0.06213882, y: 0.07370483, z: 0.9953053, w: -0.0085843755}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000006}
+    - name: calf_r
+      parentName: thigh_r
+      position: {x: -0.42572248, y: -0.000000015497207, z: 0}
+      rotation: {x: -0.0488843, y: -0.018863885, z: 0.065522335, w: 0.9964745}
+      scale: {x: 1.0000012, y: 1.0000014, z: 1.0000013}
+    - name: foot_r
+      parentName: calf_r
+      position: {x: -0.40196815, y: 0, z: -0.000000095367426}
+      rotation: {x: -0.005886226, y: -0.031991284, z: -0.07035481, w: 0.9969916}
+      scale: {x: 0.9999997, y: 1, z: 1.0000001}
+    - name: ball_r
+      parentName: foot_r
+      position: {x: -0.10453817, y: 0.16577797, z: -0.0008015823}
+      rotation: {x: 0.00008046533, y: -0.000029940154, z: 0.7186339, w: 0.69538873}
+      scale: {x: 1, y: 1.0000007, z: 1.0000004}
+    - name: Astronaut_Body_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Gloves_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Shoes_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Watchs_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Body_Detail_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Helmet_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Glasses_02_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Backpack_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_light_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Glasses_03_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Glasses_04_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Hoses_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Body_Details_02_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Astronaut_Body_Details_03_Mesh
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Object001
+      parentName: Astronaut@Fly_02(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -253,13 +1000,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

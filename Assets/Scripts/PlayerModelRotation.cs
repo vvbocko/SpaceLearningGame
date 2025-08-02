@@ -3,7 +3,9 @@ using UnityEngine;
 public class PlayerModelRotation : MonoBehaviour
 {
     [SerializeField] private Transform orientation;
-    [SerializeField] private Transform playerModel;
+    [SerializeField] private Transform playerModelMale;
+    [SerializeField] private Transform playerModelSuit;
+
     [SerializeField] private float rotationSpeed = 10f;
 
     void Update()
@@ -17,7 +19,8 @@ public class PlayerModelRotation : MonoBehaviour
 
         // Smoothly rotate the player model to face that direction
         Quaternion targetRotation = Quaternion.LookRotation(lookDir);
-        playerModel.rotation = Quaternion.Slerp(playerModel.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        playerModelMale.rotation = Quaternion.Slerp(playerModelMale.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        playerModelSuit.rotation = Quaternion.Slerp(playerModelSuit.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 }
 

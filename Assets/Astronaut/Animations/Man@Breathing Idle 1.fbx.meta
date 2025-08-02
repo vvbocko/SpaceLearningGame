@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ae5e26b453220f4aaf9c6164dd1625d
+guid: a7ea0279607e5d749b99073ca4f0292b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -16,7 +16,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
+      does not match:\n\tTransform 'Man' not found in HumanDescription.\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -33,7 +34,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: Breathing Idle 1
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
@@ -44,7 +45,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -528,38 +529,38 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Man@Breathing Idle(Clone)
+    - name: Man@Breathing Idle 1(Clone)
       parentName: 
       position: {x: 0.025673555, y: -0.019862289, z: 0.07238677}
       rotation: {x: -0.029695515, y: 0.0055183875, z: 0.012550414, w: 0.999465}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamo:Astronaut_Person_Body
-      parentName: Man@Breathing Idle(Clone)
+      parentName: Man@Breathing Idle 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamo:Astronaut_Person_Face_01
-      parentName: Man@Breathing Idle(Clone)
+      parentName: Man@Breathing Idle 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamo:Astronaut_Person_Face_02
-      parentName: Man@Breathing Idle(Clone)
+      parentName: Man@Breathing Idle 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamo:Astronaut_Person_Face_03
-      parentName: Man@Breathing Idle(Clone)
+      parentName: Man@Breathing Idle 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamo:Astronaut_Person_Hoses
-      parentName: Man@Breathing Idle(Clone)
+      parentName: Man@Breathing Idle 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: root
-      parentName: Man@Breathing Idle(Clone)
+      parentName: Man@Breathing Idle 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}

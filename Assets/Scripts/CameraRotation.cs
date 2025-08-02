@@ -11,7 +11,7 @@ public class CameraRotation : MonoBehaviour
     public float sensitivityX = 100f;
     public float sensitivityY = 100f;
 
-    [SerializeField] private float maxRotation = 80f;
+    [SerializeField] public float maxRotation = 80f;
 
     private float xRotation;
     private float yRotation;

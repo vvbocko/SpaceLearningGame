@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class FixingMiniGame : MonoBehaviour
 {
+    [SerializeField] private CameraRotation playerRotation;
+    [SerializeField] private ZeroGravityMovement playerMovement;
+
     [SerializeField] private GameObject fishingMiniGameUI;
     [SerializeField] private GameObject interactableBox;
     [SerializeField] private Scrollbar playerBar;
@@ -40,6 +43,7 @@ public class FixingMiniGame : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetKey(KeyCode.Space))
         {
             velocity += Time.deltaTime * liftForce;
@@ -132,6 +136,9 @@ public class FixingMiniGame : MonoBehaviour
         playerBar.enabled = false;
         fishBar.enabled = false;
         progressBar.enabled = false;
+
+        playerRotation.enabled = true;
+        playerMovement.enabled = true;
     }
     public void EnableUI()
     {
@@ -139,6 +146,9 @@ public class FixingMiniGame : MonoBehaviour
         playerBar.enabled = true;
         fishBar.enabled = true;
         progressBar.enabled = true;
+
+        playerRotation.enabled = false;
+        playerMovement.enabled = false;
     }
 
     private void MakeUninteractable()

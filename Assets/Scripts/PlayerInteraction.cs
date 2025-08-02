@@ -38,8 +38,6 @@ public class PlayerInteraction : MonoBehaviour
     void Update()
     {
         HandleInteraction();
-        // ▼ Removed the dialogue progression check entirely ▼
-        // Dialogue progression is now fully handled by DialogueManager's Update()
     }
 
     void HandleInteraction()
