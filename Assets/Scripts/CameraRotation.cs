@@ -11,7 +11,7 @@ public class CameraRotation : MonoBehaviour
     public float sensitivityX = 100f;
     public float sensitivityY = 100f;
 
-    [SerializeField] public float maxRotation = 80f;
+    [SerializeField] public float maxRotationX = 80f;
 
     private float xRotation;
     private float yRotation;
@@ -50,7 +50,7 @@ public class CameraRotation : MonoBehaviour
 
         yRotation += mouseX;
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -80f , maxRotation);
+        xRotation = Mathf.Clamp(xRotation, -80f , maxRotationX);
 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(xRotation, yRotation, 0);

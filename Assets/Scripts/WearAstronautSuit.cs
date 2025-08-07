@@ -24,7 +24,7 @@ public class WearAstronautSuit : MonoBehaviour
     {
         CurrentAnimator = maleAnimator;
 
-        playerCamera.maxRotation = 80f;
+        playerCamera.maxRotationX = 80f;
 
         suitModel.SetActive(true);
         maleModel.SetActive(true);
@@ -40,7 +40,7 @@ public class WearAstronautSuit : MonoBehaviour
 
         if (isWearingSuit)
         {
-            playerCamera.maxRotation = 65f;
+            playerCamera.maxRotationX = 65f;
             
             MakeSuitInvisible(suitModel, true);
             maleModel.SetActive(false);
@@ -54,7 +54,7 @@ public class WearAstronautSuit : MonoBehaviour
         }
         else
         {
-            playerCamera.maxRotation = 80f;
+            playerCamera.maxRotationX = 80f;
 
             MakeSuitInvisible(suitModel, false);
             maleModel.SetActive(true);
