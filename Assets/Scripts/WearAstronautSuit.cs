@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WearAstronautSuit : MonoBehaviour
 {
-    [SerializeField] private PickupController pickupController;
+    [SerializeField] private PickUpController pickupController;
     [SerializeField] private Transform maleHoldPoint;
     [SerializeField] private Transform astronautHoldPoint;
 

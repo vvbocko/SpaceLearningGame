@@ -40,6 +40,10 @@ public class Interactable : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue(dialogueAssign);
         }
+        /*
+              // if (isCarabineModeOn && this.HaveComponent<ShelfHangZone>) //Karabin mode is on and this is a shelf
+              { carabiner.PinCarabinerToRail(); }
+        */
         else
         {
             onInteraction?.Invoke();
