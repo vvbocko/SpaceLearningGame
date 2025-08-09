@@ -214,9 +214,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495f5b08719d6ff49adf42b8ad3b9194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  playerAnimatorSuit: {fileID: 6932544506440884621}
-  orientation: {fileID: 1228482055810358556}
+  moveDuration: 0.6
+  movementCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  moveCooldown: 1
+  animator: {fileID: 0}
 --- !u!1 &8495419651916308743
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +376,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3035929708186937465, guid: 783b856c0b90daf438c9c2b3267f8efa,
         type: 3}
-      insertIndex: 1
+      insertIndex: 0
       addedObject: {fileID: 4642856951845341876}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 783b856c0b90daf438c9c2b3267f8efa, type: 3}
@@ -365,12 +389,6 @@ Transform:
 --- !u!4 &5876469304992263868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5529350376687624649, guid: 783b856c0b90daf438c9c2b3267f8efa,
-    type: 3}
-  m_PrefabInstance: {fileID: 2103563026827284341}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &6932544506440884621 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9008328530883325688, guid: 783b856c0b90daf438c9c2b3267f8efa,
     type: 3}
   m_PrefabInstance: {fileID: 2103563026827284341}
   m_PrefabAsset: {fileID: 0}
