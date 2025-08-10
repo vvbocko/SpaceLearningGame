@@ -9,7 +9,6 @@ public class AirLock : MonoBehaviour
     [SerializeField] private Transform outsideCameraPos;
     [SerializeField] private float switchDelay = 0.5f;
     [SerializeField] private CanvasGroup fadeCanvas;
-    [SerializeField] private PlayerInteraction outsidePlayerInteraction;
 
     private void Start()
     {
