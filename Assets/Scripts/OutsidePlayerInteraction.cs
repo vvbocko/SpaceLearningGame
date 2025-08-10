@@ -6,9 +6,9 @@ public class OutsidePlayerInteraction : MonoBehaviour
     public static OutsidePlayerInteraction Instance { get; private set; }
 
     [Header("References")]
-    [SerializeField] private OutsidePickUpContoller pickupController;
+    [SerializeField] private OutsidePickUpContoller outsidePickUpController;
     [SerializeField] private Camera playerCamera;
-    [SerializeField] private Carabiner carabiner; // Dodaj referencjê do Carabiner
+    [SerializeField] private Carabiner carabiner; // optional direct reference
 
     [Header("Settings")]
     [SerializeField] private float playerReach = 3f;
@@ -19,21 +19,15 @@ public class OutsidePlayerInteraction : MonoBehaviour
     private void Awake()
     {
         if (Instance == null) Instance = this;
-    }
 
-    public void SetInteractionEnabled(bool enabled)
-    {
-        interactionEnabled = enabled;
-        GetComponent<ZeroGravityMovement>().enabled = enabled;
+        if (outsidePickUpController == null)
+            outsidePickUpController = FindObjectOfType<OutsidePickUpContoller>();
 
-        CameraRotation camRotation = FindObjectOfType<CameraRotation>();
-        camRotation?.SetCursorLock(enabled);
+        if (playerCamera == null)
+            playerCamera = Camera.main;
 
-        if (!enabled && currentInteractable != null)
-        {
-            currentInteractable.DisableOutline();
-            currentInteractable = null;
-        }
+        if (carabiner == null)
+            carabiner = FindObjectOfType<Carabiner>();
     }
 
     void Update()
@@ -46,80 +40,91 @@ public class OutsidePlayerInteraction : MonoBehaviour
         Interactable detectedInteractable = DetectInteractable();
 
         if (detectedInteractable != currentInteractable)
-        {
             UpdateCurrentInteractable(detectedInteractable);
-        }
 
-        if (interactionEnabled) HandleInput();
+        if (interactionEnabled)
+            HandleInput();
     }
 
     void HandleInput()
     {
-        // Left click
         if (Input.GetMouseButtonDown(0))
         {
-            // CASE 1: Clicking on a pinned carabiner ? pick it up into hand
+            // CASE 1: Click a pinned carabiner -> detach & pick up
             if (carabiner != null && carabiner.IsAttached && currentInteractable == carabiner.GetComponent<Interactable>())
             {
                 carabiner.TryDetach();
-                pickupController.TryPickUp(carabiner.GetComponent<Interactable>());
+                outsidePickUpController?.TryPickUp(carabiner.GetComponent<Interactable>());
                 return;
             }
 
-            // CASE 2: Holding carabiner & clicking a rail ? pin to rail
-            if (pickupController.IsHoldingSomething() && pickupController.GetHeldObject() == carabiner.GetComponent<Interactable>())
+            // CASE 2: Holding carabiner && clicked on a rail -> pin to the hang point nearest the click
+            if (outsidePickUpController != null && outsidePickUpController.IsHoldingSomething()
+                && outsidePickUpController.GetHeldObject() == carabiner?.GetComponent<Interactable>())
             {
-                if (currentInteractable != null && currentInteractable.GetComponent<ShelfHangZone>() != null)
-                {
-                    ShelfHangZone shelf = currentInteractable.GetComponent<ShelfHangZone>();
-                    carabiner.TryAttachToClickedRail(shelf);
+                // Do a raycast to get the exact hit point and the shelf hit
+                if (playerCamera == null) return;
 
-                    // release from PickupController so it stops moving it
-                    pickupController.ForceRelease();
-                    return;
+                Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out RaycastHit hit, playerReach))
+                {
+                    ShelfHangZone shelf = hit.collider.GetComponentInParent<ShelfHangZone>();
+                    if (shelf != null)
+                    {
+                        // choose hang point by using the actual hit.point
+                        Transform chosenHangPoint = shelf.GetClosestHangPoint(hit.point);
+                        if (chosenHangPoint == null)
+                        {
+                            Debug.LogWarning("[OutsidePlayerInteraction] No hang point found on shelf.");
+                            return;
+                        }
+
+                        // Stop pickup controller BEFORE attaching so it won't keep moving the object
+                        outsidePickUpController.ForceRelease();
+
+                        // Attach the carabiner to the chosen hang point
+                        carabiner.AttachToRail(shelf, chosenHangPoint);
+                        return;
+                    }
                 }
             }
 
-            // CASE 3: Normal pickup logic
+            // CASE 3: Normal pickup (pickable objects)
             if (currentInteractable != null && currentInteractable.IsPickable)
             {
                 HandlePickup();
                 return;
             }
 
-            // CASE 4: If it's an interactable but not pickable ? interact
+            // CASE 4: Other interactions
             if (currentInteractable != null && !currentInteractable.IsPickable)
             {
                 currentInteractable.Interact();
             }
         }
 
-        // Right click ? drop
-        if (Input.GetMouseButtonDown(1) && pickupController.IsHoldingSomething())
+        // Right click: drop
+        if (Input.GetMouseButtonDown(1) && outsidePickUpController != null && outsidePickUpController.IsHoldingSomething())
         {
-            pickupController.Drop();
+            outsidePickUpController.Drop();
         }
     }
 
     void HandlePickup()
     {
-        if (pickupController.IsHoldingSomething())
-        {
-            pickupController.Drop();
-        }
-        pickupController.TryPickUp(currentInteractable);
+        if (outsidePickUpController == null) return;
+        if (outsidePickUpController.IsHoldingSomething()) outsidePickUpController.Drop();
+        outsidePickUpController.TryPickUp(currentInteractable);
     }
 
     Interactable DetectInteractable()
     {
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        if (playerCamera == null) return null;
+        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, playerReach))
         {
             if (hit.collider.TryGetComponent(out Interactable interactable))
-            {
                 return interactable;
-            }
-
         }
         return null;
     }

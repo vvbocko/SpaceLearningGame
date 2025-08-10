@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class RailMovement : MonoBehaviour
 {
+    // Add near the other fields (top of class)
+    public ShelfHangZone CurrentShelf => currentShelf;
+    public int CurrentIndex => currentIndex;
+
+
     [Header("Movement Settings")]
     [SerializeField] private float moveDuration = 0.6f;
     [SerializeField] private AnimationCurve movementCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
