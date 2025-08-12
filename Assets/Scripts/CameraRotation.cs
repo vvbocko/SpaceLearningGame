@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class CameraRotation : MonoBehaviour
 {
     [SerializeField] private Transform orientation;
+    [SerializeField] private GameObject outsidePlayer;
 
     [Header("Camera Rotation")]
     
@@ -12,6 +14,7 @@ public class CameraRotation : MonoBehaviour
     public float sensitivityY = 100f;
 
     [SerializeField] public float maxRotationX = 80f;
+    [SerializeField] private float maxRotationY = 80f;
 
     private float xRotation;
     private float yRotation;
@@ -52,7 +55,31 @@ public class CameraRotation : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -80f , maxRotationX);
 
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        orientation.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        yRotation += mouseX;
+
+        if (outsidePlayer.activeInHierarchy)
+        {
+            float playerYaw = outsidePlayer.transform.eulerAngles.y;
+
+            // Get shortest angle difference between yRotation and playerYaw (-180..180)
+            float relativeYaw = Mathf.DeltaAngle(playerYaw, yRotation);
+
+            // Clamp relativeYaw to limits
+            relativeYaw = Mathf.Clamp(relativeYaw, -maxRotationY, maxRotationY);
+
+            // Reconstruct yRotation as playerYaw + clamped relativeYaw
+            yRotation = playerYaw + relativeYaw;
+        }
+
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        if (orientation != null)
+            orientation.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+    }
+
+    private float WrapAngle(float angle)
+    {
+        while (angle > 180f) angle -= 360f;
+        while (angle < -180f) angle += 360f;
+        return angle;
     }
 }

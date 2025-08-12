@@ -8,7 +8,6 @@ public class RailMovement : MonoBehaviour
     public ShelfHangZone CurrentShelf => currentShelf;
     public int CurrentIndex => currentIndex;
 
-
     [Header("Movement Settings")]
     [SerializeField] private float moveDuration = 0.6f;
     [SerializeField] private AnimationCurve movementCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
@@ -26,6 +25,7 @@ public class RailMovement : MonoBehaviour
 
     private Vector3 startPosition;
     private float moveProgress = 0f;
+    private int directionMultiplier = 1;
 
     private void Update()
     {
@@ -108,9 +108,11 @@ public class RailMovement : MonoBehaviour
 
     void TryMove(int direction)
     {
-        if (currentShelf.TryGetNextPoint(currentIndex, direction, out Transform nextPoint))
+        int adjustedDirection = direction * directionMultiplier;
+
+        if (currentShelf.TryGetNextPoint(currentIndex, adjustedDirection, out Transform nextPoint))
         {
-            currentIndex += direction;
+            currentIndex += adjustedDirection;
             MoveToPoint(nextPoint);
         }
     }
@@ -119,6 +121,23 @@ public class RailMovement : MonoBehaviour
     {
         currentShelf = shelf;
         currentIndex = shelf.GetIndexOfPoint(hangPoint);
+
+        Quaternion targetRotation = shelf.transform.rotation * Quaternion.Euler(0f, 180f, 0f);
+        transform.rotation = targetRotation;
+
+        if (shelf.hangPoints.Length >= 2)
+        {
+            Vector3 railRight = shelf.transform.right;
+            Vector3 pointsDir = (shelf.hangPoints[1].position - shelf.hangPoints[0].position).normalized;
+
+            // If dot product is negative, the points are arranged opposite to rail's right
+            directionMultiplier = (Vector3.Dot(railRight, pointsDir) >= 0) ? -1 : 1;
+        }
+        else
+        {
+            directionMultiplier = 1;
+        }
+
 
         if (!isMovingBetweenPoints)
         {

@@ -6,6 +6,7 @@ public class AirLock : MonoBehaviour
     [SerializeField] private GameObject insidePlayer;
     [SerializeField] private GameObject outsidePlayer;
     [SerializeField] private CameraHolder cameraHolder;
+    [SerializeField] private Transform insideCameraPos;
     [SerializeField] private Transform outsideCameraPos;
     [SerializeField] private float switchDelay = 0.5f;
     [SerializeField] private CanvasGroup fadeCanvas;
@@ -31,10 +32,20 @@ public class AirLock : MonoBehaviour
             }
         }
 
-        insidePlayer.SetActive(false);
-        outsidePlayer.SetActive(true);
+        if (outsidePlayer.activeInHierarchy == false)
+        {
+            insidePlayer.SetActive(false);
+            outsidePlayer.SetActive(true);
 
-        cameraHolder.cameraPosition = outsideCameraPos;
+            cameraHolder.cameraPosition = outsideCameraPos;
+        }
+        else
+        {
+            outsidePlayer.SetActive(false);
+            insidePlayer.SetActive(true);
+
+            cameraHolder.cameraPosition = insideCameraPos;
+        }
 
         if (fadeCanvas != null)
         {
