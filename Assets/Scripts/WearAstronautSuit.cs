@@ -24,8 +24,6 @@ public class WearAstronautSuit : MonoBehaviour
     {
         CurrentAnimator = maleAnimator;
 
-        playerCamera.maxRotationX = 80f;
-
         suitModel.SetActive(true);
         maleModel.SetActive(true);
         astronautModel.SetActive(false);

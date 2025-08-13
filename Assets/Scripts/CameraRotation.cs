@@ -10,20 +10,13 @@ public class CameraRotation : MonoBehaviour
 
     [Header("Camera Rotation")]
     
-    public float sensitivityX = 100f;
-    public float sensitivityY = 100f;
+    public float sensitivity = 100f;
 
-    [SerializeField] public float maxRotationX = 80f;
+    [SerializeField] public float maxRotationX = 74f;
     [SerializeField] private float maxRotationY = 80f;
 
     private float xRotation;
     private float yRotation;
-
-
-    private void Start()
-    {
-        SetCursorLock(true); // Initialize locked cursor
-    }
 
     // Public method to control cursor from other scripts
     public void SetCursorLock(bool locked)
@@ -48,12 +41,12 @@ public class CameraRotation : MonoBehaviour
     }
     private void RotationHandler()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
         yRotation += mouseX;
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -80f , maxRotationX);
+        xRotation = Mathf.Clamp(xRotation, -maxRotationX, maxRotationX);
 
         yRotation += mouseX;
 

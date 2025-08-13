@@ -39,7 +39,7 @@ public class AirLock : MonoBehaviour
 
             cameraHolder.cameraPosition = outsideCameraPos;
         }
-        else
+        else 
         {
             outsidePlayer.SetActive(false);
             insidePlayer.SetActive(true);

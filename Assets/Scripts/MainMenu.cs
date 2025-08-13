@@ -13,11 +13,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private CameraRotation cameraRotation;
     [SerializeField] private Image gameTitle;
     [SerializeField] private Button resumeButton;
-    [SerializeField] private TMP_Text playButton;
-    [SerializeField] private TMP_Text gameText;
 
     [SerializeField] private TMP_Text sensitivityNumber;
     [SerializeField] private Slider sensitivitySlider;
+    [SerializeField] private float minSensitivity = 50f;
+    [SerializeField] private float maxSensitivity = 150f;
 
     public bool isPaused = false;
 
@@ -29,12 +29,15 @@ public class MainMenu : MonoBehaviour
         mainMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
         creditsMenuUI.SetActive(false);
+        
         cameraRotation.SetCursorLock(false);
-
         cameraRotation.enabled = false; // Disable camera rotation at the start
 
-    }
+        sensitivitySlider.value = cameraRotation.sensitivity;
+        sensitivitySlider.onValueChanged.AddListener(SetSensitivity);
+        SetSensitivity(sensitivitySlider.value);
 
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -52,6 +55,9 @@ public class MainMenu : MonoBehaviour
             isPaused = false;
             cameraRotation.SetCursorLock(true);
             cameraRotation.enabled = true; // Enable camera rotation when resuming
+
+            settingsMenuUI.SetActive(false);
+            creditsMenuUI.SetActive(false);
         }
         else
         {
@@ -72,28 +78,29 @@ public class MainMenu : MonoBehaviour
         cameraRotation.enabled = true; // Enable camera rotation when starting the game
 
     }
+    //Settings Menu -----
     public void OpenSettings()
     {
-        // Logic to open settings menu
-        Debug.Log("Settings Opened");
-        // Here you would typically enable a settings UI panel or load a settings scene
+        settingsMenuUI.SetActive(true);
     }
     public void CloseSettings()
     {
-        // Logic to close settings menu
-        Debug.Log("Settings Closed");
-        // Here you would typically disable a settings UI panel or return to the main menu
+        settingsMenuUI.SetActive(false);
     }
+    public void SetSensitivity(float value)
+    {
+        float scaledValue = Mathf.Lerp(minSensitivity, maxSensitivity, value);
+        cameraRotation.sensitivity = scaledValue;
+        sensitivityNumber.text = scaledValue.ToString("F1");
+    }
+
+    //Credits Menu -----
     public void ShowCredits()
     {
-        // Logic to show credits
-        Debug.Log("Credits Shown");
-        // Here you would typically enable a credits UI panel or load a credits scene
+        creditsMenuUI.SetActive(true);
     }
     public void HideCredits()
     {
-        // Logic to hide credits
-        Debug.Log("Credits Hidden");
-        // Here you would typically disable a credits UI panel or return to the main menu
+        creditsMenuUI.SetActive(false);
     }
 }
