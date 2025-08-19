@@ -7,11 +7,18 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
+
     [SerializeField] private GameObject mainMenuUI;
     [SerializeField] private GameObject settingsMenuUI;
     [SerializeField] private GameObject creditsMenuUI;
+
+    [SerializeField] private GameObject firstPopUp;
+    [SerializeField] private GameObject secondPopUp;
+
+    [SerializeField] private GameObject firstInstruction;
+    [SerializeField] private GameObject secondInstruction;
+
     [SerializeField] private CameraRotation cameraRotation;
-    [SerializeField] private Image gameTitle;
     [SerializeField] private Button resumeButton;
 
     [SerializeField] private TMP_Text sensitivityNumber;
@@ -20,18 +27,21 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private float maxSensitivity = 150f;
 
     public bool isPaused = false;
+    public bool wasPopUpShown = false;
+    public bool wasSecondPopUpShown = false;
 
-    // Start is called before the first frame update
     void Start()
     {
-        gameManager.PauseGame();
-
         mainMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
         creditsMenuUI.SetActive(false);
-        
+        firstPopUp.SetActive(false);
+        secondPopUp.SetActive(false);
+        firstInstruction.SetActive(true);
+        secondInstruction.SetActive(false);
+
         cameraRotation.SetCursorLock(false);
-        cameraRotation.enabled = false; // Disable camera rotation at the start
+        cameraRotation.enabled = false;
 
         sensitivitySlider.value = cameraRotation.sensitivity;
         sensitivitySlider.onValueChanged.AddListener(SetSensitivity);
@@ -40,7 +50,9 @@ public class MainMenu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // ESC only works outside of dialogue
+        if (Input.GetKeyDown(KeyCode.Escape) && wasPopUpShown &&
+            gameManager.CurrentState != GameState.Dialogue)
         {
             TogglePause();
         }
@@ -54,7 +66,7 @@ public class MainMenu : MonoBehaviour
             mainMenuUI.SetActive(false);
             isPaused = false;
             cameraRotation.SetCursorLock(true);
-            cameraRotation.enabled = true; // Enable camera rotation when resuming
+            cameraRotation.enabled = true;
 
             settingsMenuUI.SetActive(false);
             creditsMenuUI.SetActive(false);
@@ -65,19 +77,25 @@ public class MainMenu : MonoBehaviour
             mainMenuUI.SetActive(true);
             isPaused = true;
             cameraRotation.SetCursorLock(false);
-            cameraRotation.enabled = false; // Disable camera rotation when paused
+            cameraRotation.enabled = false;
         }
     }
 
     public void StartGame()
     {
-        mainMenuUI.SetActive(false);
+        if (!wasPopUpShown)
+        {
+            mainMenuUI.SetActive(false);
+            gameManager.BeginMission();
+            return;
+        }
         gameManager.ResumeGame();
+        mainMenuUI.SetActive(false);
         isPaused = false;
         cameraRotation.SetCursorLock(true);
-        cameraRotation.enabled = true; // Enable camera rotation when starting the game
-
+        cameraRotation.enabled = true;
     }
+
     //Settings Menu -----
     public void OpenSettings()
     {
@@ -103,4 +121,43 @@ public class MainMenu : MonoBehaviour
     {
         creditsMenuUI.SetActive(false);
     }
+
+    //PopUp Panel -----
+    public void ShowPopUp()
+    {
+        firstPopUp.SetActive(true);
+        gameManager.currentObjectiveIndex = 0;
+    }
+    public void ExitPopUp()
+    {
+        firstPopUp.SetActive(false);
+
+        wasPopUpShown = true;
+        gameManager.ResumeGame();
+        isPaused = false;
+        cameraRotation.SetCursorLock(true);
+        cameraRotation.enabled = true;
+    }
+
+    public void ShowPopUpSecond()
+    {
+        secondPopUp.SetActive(true);
+        firstInstruction.SetActive(false);
+        secondInstruction.SetActive(true);
+        gameManager.PauseGame();
+        isPaused = true;
+        cameraRotation.SetCursorLock(false);
+        cameraRotation.enabled = false;
+    }
+    public void ExitPopUpSecond()
+    {
+        secondPopUp.SetActive(false);
+
+        wasSecondPopUpShown = true;
+        gameManager.ResumeGame();
+        isPaused = false;
+        cameraRotation.SetCursorLock(true);
+        cameraRotation.enabled = true;
+    }
+
 }

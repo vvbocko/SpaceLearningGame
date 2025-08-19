@@ -152,6 +152,25 @@ public class DialogueManager : MonoBehaviour
         VD.OnEnd -= EndDialogue;
         VD.EndDialogue();
         dialogueCanvas.SetActive(false);
+
+        //if is NPC, wait 1 second before re-enabling interaction
+        var interactable = currentDialogue?.GetComponent<Interactable>();
+        if (interactable != null && interactable.IsNPC)
+        {
+            StartCoroutine(WaitAndEnableInteraction(interactable));
+        }
+        else
+        {
+            PlayerInteraction.Instance.SetInteractionEnabled(true);
+        }
+    }
+
+    private IEnumerator WaitAndEnableInteraction(Interactable interactable)
+    {
+        CameraRotation camRotation = FindObjectOfType<CameraRotation>();
+        camRotation?.SetCursorLock(enabled);
+
+        yield return new WaitForSeconds(2f);
         PlayerInteraction.Instance.SetInteractionEnabled(true);
     }
 

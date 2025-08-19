@@ -68,11 +68,4 @@ public class CameraRotation : MonoBehaviour
         if (orientation != null)
             orientation.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
     }
-
-    private float WrapAngle(float angle)
-    {
-        while (angle > 180f) angle -= 360f;
-        while (angle < -180f) angle += 360f;
-        return angle;
-    }
 }
