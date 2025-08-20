@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OutsidePickUpContoller : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private Transform holdPoint;
     [SerializeField] private float throwStrength = 1.02f;
     private Interactable heldObject;
@@ -11,6 +12,8 @@ public class OutsidePickUpContoller : MonoBehaviour
 
     [SerializeField] private Animator animator;
     [SerializeField] private int holdLayerIndex = 1;
+    private bool finishedCarabinerTask = false;
+    private bool finishedRailTask = false;
 
     public void SetAnimator(Animator newAnimator)
     {
@@ -58,14 +61,25 @@ public class OutsidePickUpContoller : MonoBehaviour
 
         if (animator != null && holdLayerIndex >= 0)
             animator.SetLayerWeight(holdLayerIndex, 1f);
+
+        if (interactable.GetComponent<Carabiner>() != null && !finishedCarabinerTask)
+        {
+            //interactable.GetComponent<Outline>().enabled = false; // Disable outline when picked up
+            gameManager.CarabinerPicked();
+            finishedCarabinerTask = true;
+
+        }
     }
 
-    /// <summary>
-    /// Place the currently held object onto a rail hang point.
-    /// </summary>
     public void PlaceOnRail(Transform hangPoint)
     {
         if (heldObject == null) return;
+
+        //if (!finishedRailTask)
+        //{
+        //    gameManager.PinnedToRail();
+        //    finishedRailTask = true;
+        //}
 
         heldObject.transform.SetParent(hangPoint);
         heldObject.transform.localPosition = Vector3.zero;
@@ -78,16 +92,13 @@ public class OutsidePickUpContoller : MonoBehaviour
             heldRigidbody = null;
         }
 
-        // IMPORTANT: clear heldObject so hand-follow stops
         heldObject = null;
 
         if (animator != null && holdLayerIndex >= 0)
             animator.SetLayerWeight(holdLayerIndex, 0f);
+
     }
 
-    /// <summary>
-    /// Drops the held object normally (not onto a rail).
-    /// </summary>
     public void Drop()
     {
         if (heldObject == null) return;
@@ -121,7 +132,6 @@ public class OutsidePickUpContoller : MonoBehaviour
     {
         if (heldObject != null)
         {
-            // Don't detach here — caller will decide new parent
             heldObject = null;
         }
     }

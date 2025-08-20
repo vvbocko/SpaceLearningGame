@@ -14,6 +14,8 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] private GameObject firstPopUp;
     [SerializeField] private GameObject secondPopUp;
+    [SerializeField] private GameObject thirdPopUp;
+    [SerializeField] private GameObject endingMessage;
 
     [SerializeField] private GameObject firstInstruction;
     [SerializeField] private GameObject secondInstruction;
@@ -28,16 +30,21 @@ public class MainMenu : MonoBehaviour
 
     public bool isPaused = false;
     public bool wasPopUpShown = false;
-    public bool wasSecondPopUpShown = false;
+    public bool isSecondPopUpShown = false;
+    public bool isThirdPopUpShown = false;
+    public bool isEndingMessageShown = false;
 
     void Start()
     {
         mainMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
         creditsMenuUI.SetActive(false);
+
         firstPopUp.SetActive(false);
         secondPopUp.SetActive(false);
-        firstInstruction.SetActive(true);
+        thirdPopUp.SetActive(false);
+
+        firstInstruction.SetActive(false);
         secondInstruction.SetActive(false);
 
         cameraRotation.SetCursorLock(false);
@@ -51,7 +58,7 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         // ESC only works outside of dialogue
-        if (Input.GetKeyDown(KeyCode.Escape) && wasPopUpShown &&
+        if (Input.GetKeyDown(KeyCode.Escape) && wasPopUpShown && !isSecondPopUpShown && !isThirdPopUpShown && !isEndingMessageShown &&
             gameManager.CurrentState != GameState.Dialogue)
         {
             TogglePause();
@@ -126,6 +133,7 @@ public class MainMenu : MonoBehaviour
     public void ShowPopUp()
     {
         firstPopUp.SetActive(true);
+        firstInstruction.SetActive(true);
         gameManager.currentObjectiveIndex = 0;
     }
     public void ExitPopUp()
@@ -146,6 +154,7 @@ public class MainMenu : MonoBehaviour
         secondInstruction.SetActive(true);
         gameManager.PauseGame();
         isPaused = true;
+        isSecondPopUpShown = true;
         cameraRotation.SetCursorLock(false);
         cameraRotation.enabled = false;
     }
@@ -153,11 +162,52 @@ public class MainMenu : MonoBehaviour
     {
         secondPopUp.SetActive(false);
 
-        wasSecondPopUpShown = true;
         gameManager.ResumeGame();
         isPaused = false;
+        isSecondPopUpShown = false;
         cameraRotation.SetCursorLock(true);
         cameraRotation.enabled = true;
+    }
+
+    public void ShowPopUpThird()
+    {
+        if (isThirdPopUpShown)
+        {
+            return; 
+        }
+        thirdPopUp.SetActive(true);
+
+        gameManager.PauseGame();
+        isPaused = true;
+        isThirdPopUpShown = true;
+        cameraRotation.SetCursorLock(false);
+        cameraRotation.enabled = false;
+        
+    }
+    public void ExitPopUpThird()
+    {
+        thirdPopUp.SetActive(false);
+
+        gameManager.ResumeGame();
+        isPaused = false;
+        isThirdPopUpShown = false;
+        cameraRotation.SetCursorLock(true);
+        cameraRotation.enabled = true;
+    }
+    public void ShowEndingMessage()
+    {
+        endingMessage.SetActive(true);
+
+        isEndingMessageShown = true;
+        gameManager.PauseGame();
+        isPaused = true;
+        cameraRotation.SetCursorLock(false);
+        cameraRotation.enabled = false;
+    }
+    public void ReturnToMainMenu()
+    {
+        isEndingMessageShown = false;
+        gameManager.RestartGame();
     }
 
 }

@@ -30,6 +30,21 @@ public class OutsidePlayerInteraction : MonoBehaviour
             carabiner = FindObjectOfType<Carabiner>();
     }
 
+    public void SetOutsideInteractionEnabled(bool enabled)
+    {
+        interactionEnabled = enabled;
+        GetComponent<RailMovement>().enabled = enabled;
+
+        CameraRotation camRotation = FindObjectOfType<CameraRotation>();
+        camRotation?.SetCursorLock(enabled);
+
+        if (!enabled && currentInteractable != null)
+        {
+            currentInteractable.DisableOutline();
+            currentInteractable = null;
+        }
+    }
+
     void Update()
     {
         HandleInteraction();

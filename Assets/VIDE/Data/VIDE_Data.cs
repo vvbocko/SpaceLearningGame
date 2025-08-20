@@ -803,8 +803,6 @@ namespace VIDE_Data
                     string name = Path.GetFileNameWithoutExtension((string)dict["pd_sprite_" + i.ToString()]);
                     if (spriteNames.Contains(name))
                         com.sprite = sprites[spriteNames.IndexOf(name)];
-                    else if (name != string.Empty)
-                        Debug.LogError("'" + name + "' not found in any Resources folder!");
                 }
 
 

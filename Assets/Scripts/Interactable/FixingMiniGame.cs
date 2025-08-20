@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FixingMiniGame : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private CameraRotation playerRotation;
     [SerializeField] private ZeroGravityMovement playerMovement;
 
@@ -30,6 +31,8 @@ public class FixingMiniGame : MonoBehaviour
     [Header("Progress Bar")]
     [SerializeField] private float progressSpeed = 2f;
 
+    private bool isActive = false;
+
     void Start()
     {
         interactableBox.GetComponent<Interactable>().enabled = true;
@@ -43,6 +46,7 @@ public class FixingMiniGame : MonoBehaviour
 
     void Update()
     {
+        if (!isActive) return;
 
         if (Input.GetKey(KeyCode.Space))
         {
@@ -96,7 +100,10 @@ public class FixingMiniGame : MonoBehaviour
     {
         if(progressBar.value >= 1f)
         {
+            progressBar.value = 1f;
             DisableUI();
+            gameManager.AirLeakFixed();
+            MakeUninteractable();
         }
         if (IsOverlapping())
         {
@@ -128,6 +135,21 @@ public class FixingMiniGame : MonoBehaviour
         return new Rect(xMin, yMin, xMax - xMin, yMax - yMin);
     }
 
+    public void EnableUI()
+    {
+        if (gameManager.finishedFixing)
+        {
+            return;
+        }
+        fishingMiniGameUI.SetActive(true);
+        playerBar.enabled = true;
+        fishBar.enabled = true;
+        progressBar.enabled = true;
+
+        playerRotation.enabled = false;
+        playerMovement.enabled = false;
+        isActive = true;
+    }
     private void DisableUI()
     {
         progressBar.value = 0;
@@ -139,18 +161,9 @@ public class FixingMiniGame : MonoBehaviour
 
         playerRotation.enabled = true;
         playerMovement.enabled = true;
+        isActive = false;
     }
-    public void EnableUI()
-    {
-        fishingMiniGameUI.SetActive(true);
-        playerBar.enabled = true;
-        fishBar.enabled = true;
-        progressBar.enabled = true;
-
-        playerRotation.enabled = false;
-        playerMovement.enabled = false;
-    }
-
+    
     private void MakeUninteractable()
     {
         interactableBox.GetComponent<Interactable>().enabled = false;

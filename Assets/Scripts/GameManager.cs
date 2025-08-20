@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -14,10 +15,18 @@ public class GameManager : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private MainMenu menuManager;
     [SerializeField] private GameObject astronautSuit;
+    [SerializeField] private GameObject airLeakPlace;
+
     [SerializeField] private GameObject objectiveMenu;
     [SerializeField] private GameObject blockage1;
     [SerializeField] private GameObject blockage2;
+    [SerializeField] private GameObject airlock1;
+    [SerializeField] private GameObject airlock2;
+
     [SerializeField] private GameObject arrow;
+    [SerializeField] private GameObject carabinerArrow;
+    [SerializeField] private GameObject pipeArrow;
+
     [SerializeField] private TMP_Text objectiveText;
     [SerializeField] private AudioSource insideMusic;
     [SerializeField] private AudioSource outsideMusic;
@@ -28,6 +37,8 @@ public class GameManager : MonoBehaviour
         "Pogadaj z dwójk¹ astronautów (0/2)",
         "Za³ó¿ skafander astronauty",
         "Opuœæ stacjê kosmiczn¹",
+        "Podnieœ karabiñczyk",
+        //"Przypnij do porêczy",
         "Napraw wyciek powietrza",
         "Wróæ do œrodka stacji kosmicznej"
     };
@@ -45,8 +56,13 @@ public class GameManager : MonoBehaviour
         objectiveMenu.SetActive(false);
         blockage1.SetActive(true);
         blockage2.SetActive(true);
+        airlock1.SetActive(true);
+        airlock2.SetActive(false);
         arrow.SetActive(false);
+        carabinerArrow.SetActive(false);
+        pipeArrow.SetActive(false);
         astronautSuit.SetActive(true);
+        airLeakPlace.SetActive(true);
 
         PlayInsideMusic();
     }
@@ -138,24 +154,45 @@ public class GameManager : MonoBehaviour
             menuManager.ShowPopUpSecond();
             blockage1.SetActive(false);
             arrow.SetActive(false);
+            carabinerArrow.SetActive(true);
+        }
+    }
+    public void CarabinerPicked()
+    {
+        if (currentObjectiveIndex == 3) // "Podnieœ karabiñczyk"
+        {
+            AdvanceObjective();
+            carabinerArrow.SetActive(false);
+            pipeArrow.SetActive(true);
         }
     }
 
+    //public void PinnedToRail()
+    //{
+    //    if (currentObjectiveIndex == 4) // "Przypnij do porêczy"
+    //    {
+    //        AdvanceObjective();
+    //        pipeArrow.SetActive(false);
+    //    }
+    //}
+
     public void AirLeakFixed()
     {
-        if (currentObjectiveIndex == 3) // "Napraw wyciek powietrza"
+        if (currentObjectiveIndex == 4) // "Napraw wyciek powietrza"
         {
             AdvanceObjective();
+            menuManager.ShowPopUpThird();
+            airlock2.SetActive(true);
+            airLeakPlace.SetActive(false);
             finishedFixing = true;
         }
     }
 
     public void ReturnedToStation()
     {
-        if (currentObjectiveIndex == 4) // "Wróæ do œrodka stacji kosmicznej"
+        if (currentObjectiveIndex == 5) // "Wróæ do œrodka stacji kosmicznej"
         {
-            // Mission complete
-            // Show end screen and reset game state
+            menuManager.ShowEndingMessage();
         }
     }
 
@@ -179,4 +216,10 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame() => SetState(GameState.Paused);
     public void ResumeGame() => SetState(GameState.Playing);
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

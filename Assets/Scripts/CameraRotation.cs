@@ -24,7 +24,6 @@ public class CameraRotation : MonoBehaviour
         Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = !locked;
         
-        // Optional: Pause rotation when cursor is unlocked
         if (!locked) 
         {
             xRotation = transform.localEulerAngles.x;

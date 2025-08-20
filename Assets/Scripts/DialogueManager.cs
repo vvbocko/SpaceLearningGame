@@ -8,6 +8,10 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     [Header("UI References")]
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private PlayerInteraction insidePlayerInteraction;
+    [SerializeField] private OutsidePlayerInteraction outsidePlayerInteraction;
+
     [SerializeField] private GameObject dialogueCanvas;
     [SerializeField] private Text npcNameText;
     [SerializeField] private Text dialogueText;
@@ -16,8 +20,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Button[] choiceButtons;
     [SerializeField] private GameObject continuePrompt; // Assign in inspector
 
+
     [Header("Settings")]
     [SerializeField] private float textDisplaySpeed = 0.05f;
+    [SerializeField] private float afterDialogueWait = 1.5f;
 
     private bool isTyping = false;
     private string currentSentence;
@@ -29,7 +35,6 @@ public class DialogueManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             gameObject.SetActive(true); // Force active
             VD.LoadDialogues();
         }
@@ -42,20 +47,35 @@ public class DialogueManager : MonoBehaviour
         // Ensure canvas starts disabled
         if (dialogueCanvas != null)
             dialogueCanvas.SetActive(false);
-    } 
+    }
+    void Update()
+    {
+        if (continuePrompt.activeSelf)
+        {
+            float scale = 1f + Mathf.PingPong(Time.time * 0.5f, 0.1f);
+            continuePrompt.transform.localScale = Vector3.one * scale;
+        }
+
+        if (VD.isActive && Input.GetMouseButtonDown(0))
+        {
+            AdvanceDialogue();
+        }
+    }
     public void StartDialogue(VIDE_Assign dialogue)
     {
         if (!this.enabled) // Double-check
         {
             this.enabled = true;
         }
-
+        gameManager.SetState(GameState.Dialogue);
         currentDialogue = dialogue;
         dialogueCanvas.SetActive(true);
         VD.OnNodeChange += UpdateDialogueUI;
         VD.OnEnd += EndDialogue;
         VD.BeginDialogue(dialogue);
-        PlayerInteraction.Instance?.SetInteractionEnabled(false);
+
+        insidePlayerInteraction?.SetInteractionEnabled(false);
+        outsidePlayerInteraction?.SetOutsideInteractionEnabled(false);
     }
 
     private void UpdateDialogueUI(VD.NodeData data)
@@ -151,6 +171,7 @@ public class DialogueManager : MonoBehaviour
         VD.OnNodeChange -= UpdateDialogueUI;
         VD.OnEnd -= EndDialogue;
         VD.EndDialogue();
+        gameManager.SetState(GameState.Playing);
         dialogueCanvas.SetActive(false);
 
         //if is NPC, wait 1 second before re-enabling interaction
@@ -161,7 +182,8 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            PlayerInteraction.Instance.SetInteractionEnabled(true);
+            insidePlayerInteraction?.SetInteractionEnabled(true);
+            outsidePlayerInteraction?.SetOutsideInteractionEnabled(true);
         }
     }
 
@@ -170,22 +192,9 @@ public class DialogueManager : MonoBehaviour
         CameraRotation camRotation = FindObjectOfType<CameraRotation>();
         camRotation?.SetCursorLock(enabled);
 
-        yield return new WaitForSeconds(2f);
-        PlayerInteraction.Instance.SetInteractionEnabled(true);
-    }
-
-    void Update()
-    {
-        if (continuePrompt.activeSelf)
-        {
-            float scale = 1f + Mathf.PingPong(Time.time * 0.5f, 0.1f);
-            continuePrompt.transform.localScale = Vector3.one * scale;
-        }
-
-        if (VD.isActive && Input.GetMouseButtonDown(0))
-        {
-            AdvanceDialogue();
-        }
+        yield return new WaitForSeconds(afterDialogueWait);
+        insidePlayerInteraction?.SetInteractionEnabled(true);
+        outsidePlayerInteraction?.SetOutsideInteractionEnabled(true);
     }
 
     void OnDestroy()
