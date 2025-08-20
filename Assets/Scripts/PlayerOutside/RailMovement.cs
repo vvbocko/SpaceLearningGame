@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RailMovement : MonoBehaviour
 {
-    // Add near the other fields (top of class)
     public ShelfHangZone CurrentShelf => currentShelf;
     public int CurrentIndex => currentIndex;
 

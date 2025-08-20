@@ -33,14 +33,11 @@ public class OutsidePickUpContoller : MonoBehaviour
         }
     }
 
-
-    // Pick up any interactable object.
     public void TryPickUp(Interactable interactable)
     {
         if (heldObject != null || !interactable.IsPickable)
             return;
 
-        // If the object is currently attached to a rail, detach it first
         if (interactable.transform.parent != null && interactable.transform.parent.CompareTag("HangPoint"))
         {
             interactable.transform.SetParent(null);

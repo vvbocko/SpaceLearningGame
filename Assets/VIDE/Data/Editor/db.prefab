@@ -44,23 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 9
+  fileIndex: 10
   skinIndex: 0
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 57148
+  currentID: 14313
   autosave: 1
   previewPanning: 0
-  currentDiag: 9
+  currentDiag: 10
   locEdit: 0
   pNodeID: 18
   aNodeID: 2
   S_playerDiags:
-  - commentCount: 1
+  - commentCount: 2
     s_comment:
-    - text: "Cze\u015B\u0107, nazywam si\u0119 Wiktoria. Jestem pok\u0142adowym doktorem.
-        Jak si\u0119 czujesz?"
+    - text: "Hej, jestem Mateusz i w imieniu za\u0142ogi: witamy na Mi\u0119dzynarodowej
+        Stacji Kosmicznej (ISS)!"
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -71,17 +71,32 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 46
+        height: 61
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Jak si\u0119 czujesz?"
+      extraData: ExtraData
+      inputSetIndex: 0
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 0
     rect:
       serializedVersion: 2
-      x: 200
-      y: 170
+      x: -10
+      y: -40
       width: 348
-      height: 149.33333
+      height: 187
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -90,11 +105,10 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 3
     s_comment:
-    - text: "Potrzebuj\u0119 jeszcze troch\u0119 czasu, ale z ka\u017Cd\u0105 godzin\u0105
-        coraz lepiej. "
+    - text: "Czuj\u0119 si\u0119 dziwnie, wszystko si\u0119 unosi\u2026"
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 2
+      outputNodeIndex: 4
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -106,10 +120,10 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: "Dobrze. Przyzwyczajam si\u0119, cho\u0107 to dla mnie nowa sytuacja."
+    - text: "To niesamowite! Czuj\u0119 si\u0119 jak ryba w wodzie."
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 3
+      outputNodeIndex: 5
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -121,11 +135,10 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: "Czuj\u0119 si\u0119 dziwnie\u2026 Stan niewa\u017Cko\u015Bci jest troch\u0119
-        przyt\u0142aczaj\u0105cy."
+    - text: "Troch\u0119 mi niedobrze."
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 4
+      outputNodeIndex: 6
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -133,186 +146,28 @@ MonoBehaviour:
         x: 300
         y: 126
         width: 30
-        height: 46
+        height: 22
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 1
     rect:
       serializedVersion: 2
-      x: 580
-      y: 140
+      x: 380
+      y: -60
       width: 348
-      height: 214.66666
+      height: 190.33333
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 1
-  - commentCount: 1
+  - commentCount: 4
     s_comment:
-    - text: "To dobry znak. Nie ma co si\u0119 \u015Bpieszy\u0107. Jestem pewna,
-        \u017Ce przywykniesz."
+    - text: "Bo s\u0105 lekkie jak pi\xF3rko - nie ma grawitacji."
       extraData: ExtraData
       inputSetIndex: 2
-      outputNodeIndex: 5
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 301
-        y: 61
-        width: 30
-        height: 46
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 2
-    rect:
-      serializedVersion: 2
-      x: 990
-      y: 80
-      width: 348
-      height: 149.33333
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: "Jasne, daj sobie czas. Jestem pewna, \u017Ce nied\u0142ugo poczujesz
-        si\u0119 lepiej."
-      extraData: ExtraData
-      inputSetIndex: 3
-      outputNodeIndex: 5
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 301
-        y: 61
-        width: 30
-        height: 46
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 3
-    rect:
-      serializedVersion: 2
-      x: 990
-      y: 220
-      width: 348
-      height: 149.33333
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: "To normalne. Wa\u017Cne, aby obserwowa\u0107 swoje reakcje. Gdyby co\u015B
-        si\u0119 dzia\u0142o, zg\u0142aszaj wszelkie dolegliwo\u015Bci."
-      extraData: ExtraData
-      inputSetIndex: 4
-      outputNodeIndex: 5
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 301
-        y: 61
-        width: 30
-        height: 61
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 4
-    rect:
-      serializedVersion: 2
-      x: 990
-      y: 360
-      width: 348
-      height: 164
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 3
-    s_comment:
-    - text: "Najwa\u017Cniejsze jest aby zrozumie\u0107 jedno\u2026 To normalne,
-        \u017Ce organizm reaguje inaczej poza Ziemi\u0105. "
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: 6
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 301
-        y: 61
-        width: 30
-        height: 61
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: "Wi\u0119kszo\u015B\u0107 kosmonaut\xF3w na pocz\u0105tku do\u015Bwiadcza
-        \"Syndromu Adaptacji Kosmicznej\"\u2026"
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: "Zwykle objawia si\u0119 to tym, \u017Ce czuj\u0105 si\u0119 jakby byli
-        do g\xF3ry nogami, albo wr\u0119cz ci\u0119\u017Cej wyczu\u0107 im po\u0142o\u017Cenie
-        r\u0105k czy n\xF3g."
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 5
-    rect:
-      serializedVersion: 2
-      x: 1400
-      y: 210
-      width: 348
-      height: 288
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 3
-    s_comment:
-    - text: "Czuj\u0119 si\u0119\u2026 inaczej, ale chyba nie jest ze mn\u0105 a\u017C
-        tak \u017Ale. Czy to mi grozi?"
-      extraData: ExtraData
-      inputSetIndex: 6
       outputNodeIndex: 9
       outActionIndex: -1
       showmore: 0
@@ -321,56 +176,230 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 46
+        height: 32
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: "A wi\u0119c to mi dolega. Powiedz mi co mnie czeka."
+    - text: "Rzeczy maj\u0105 mas\u0119, Ziemia ma mas\u0119, wi\u0119c grawitacja
+        dzia\u0142a!"
       extraData: ExtraData
-      inputSetIndex: 6
+      inputSetIndex: 2
       outputNodeIndex: 8
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
         x: 300
-        y: 108
+        y: 94
         width: 30
         height: 32
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: "Dlaczego to takie cz\u0119ste?"
+    - text: "Czy to znaczy, \u017Ce tu nie dzia\u0142a grawitacja?"
       extraData: ExtraData
-      inputSetIndex: 6
+      inputSetIndex: 2
       outputNodeIndex: 7
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
         x: 300
-        y: 141
+        y: 126
         width: 30
-        height: 22
+        height: 32
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 6
+    - text: "[Wyjd\u017A z dialogu] Dzi\u0119ki za rozmow\u0119, ale misja czeka!"
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 3
     rect:
       serializedVersion: 2
-      x: 1810
-      y: 230
+      x: 1630
+      y: -70
       width: 348
-      height: 205
+      height: 232.66667
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 1
+  - commentCount: 2
+    s_comment:
+    - text: "Wyobra\u017A sobie, \u017Ce nurkujesz! Twoje cia\u0142o unosi si\u0119
+        i wystarczy delikatne pchni\u0119cie, by pop\u0142yn\u0105\u0107, gdzie tylko
+        chcesz."
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 2
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 61
+        width: 30
+        height: 61
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Oczywi\u015Bcie, na orbicie jest nieco inaczej\u2026 Panuje tu stan
+        mikrograwitacji i ka\u017Cdy przedmiot czy cz\u0142owiek mog\u0105 wydawa\u0107
+        si\u0119 lekkie jak pi\xF3rko."
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
+    rect:
+      serializedVersion: 2
+      x: 1180
+      y: -90
+      width: 348
+      height: 240.66666
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: To bardzo ciekawe zagadnienie!
+    - text: "Nie ma co si\u0119 dziwi\u0107! Ci\u0119\u017Cko to por\xF3wna\u0107
+        do czegokolwiek na Ziemi. Cho\u0107 przychodzi mi na my\u015Bl jedna rzecz\u2026"
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 61
+        width: 30
+        height: 61
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    rect:
+      serializedVersion: 2
+      x: 770
+      y: -210
+      width: 348
+      height: 164
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: "Ha! To dobra metafora tego, co si\u0119 dzieje."
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 61
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 6
+    rect:
+      serializedVersion: 2
+      x: 770
+      y: -50
+      width: 348
+      height: 134.66666
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: "Przede wszystkim pami\u0119taj, \u017Ce wszyscy przez to przechodzili\u015Bmy
+        i zawsze mo\u017Cesz si\u0119 do nas zwr\xF3ci\u0107"
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 61
+        width: 30
+        height: 61
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Gdyby co\u015B si\u0119 dzia\u0142o, Wiktoria, nasz pok\u0142adowy doktor,
+        jest tu\u017C za mn\u0105. A do tego czasu mog\u0119 Ci opowiedzie\u0107
+        pewn\u0105 analogi\u0119, kt\xF3ra mo\u017Ce Ci pom\xF3c."
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 7
+    rect:
+      serializedVersion: 2
+      x: 770
+      y: 80
+      width: 348
+      height: 240.66666
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: "Grawitacja zawsze dzia\u0142a..."
       extraData: ExtraData
       inputSetIndex: 7
       outputNodeIndex: 10
@@ -385,11 +414,11 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 7
+    ID: 5
     rect:
       serializedVersion: 2
-      x: 2200
-      y: 410
+      x: 2050
+      y: 120
       width: 348
       height: 125
     pTag: 
@@ -400,8 +429,7 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: "Zanim przejdziemy do tego co Ci grozi, odpowiedzmy sobie na pytanie
-        dlaczego tak si\u0119 dzieje.."
+    - text: "Dok\u0142adnie!"
       extraData: ExtraData
       inputSetIndex: 8
       outputNodeIndex: 10
@@ -412,17 +440,17 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 46
+        height: 22
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 8
     rect:
       serializedVersion: 2
-      x: 2200
-      y: 270
+      x: 2050
+      y: 0
       width: 348
-      height: 149.33333
+      height: 125
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -431,8 +459,7 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: "To mo\u017C\u0119 zdarzy\u0107 si\u0119 ka\u017Cdemu, ale zacznijmy
-        od uporz\u0105dkowania paru fakt\xF3w\u2026"
+    - text: "Tak mog\u0142oby si\u0119 wydawa\u0107\u2026"
       extraData: ExtraData
       inputSetIndex: 9
       outputNodeIndex: 10
@@ -443,27 +470,28 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 46
+        height: 22
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 9
     rect:
       serializedVersion: 2
-      x: 2200
-      y: 130
+      x: 2050
+      y: -120
       width: 348
-      height: 149.33333
+      height: 125
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 2
+  - commentCount: 3
     s_comment:
-    - text: "W naszym ciele mamy specjalny system, kt\xF3ry pomaga nam utrzyma\u0107
-        r\xF3wnowag\u0119. "
+    - text: "W zale\u017Cno\u015Bci od masy obiektu i odleg\u0142o\u015Bci od niego,
+        przyci\u0105ganie grawitacyjne mo\u017Ce by\u0107 ogromne, jak w przypadku
+        czarnej dziury, kt\xF3ra ma ogromn\u0105 mas\u0119! "
       extraData: ExtraData
       inputSetIndex: 10
       outputNodeIndex: 11
@@ -474,13 +502,28 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 46
+        height: 90
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: "Sk\u0142ada si\u0119 z ucha wewn\u0119trznego i receptor\xF3w w mi\u0119\u015Bniach
-        i stawach, kt\xF3re przekazuj\u0105 m\xF3zgowi informacje o po\u0142o\u017Ceniu
-        i ruchu naszego cia\u0142a."
+    - text: "Natomiast je\u015Bli jeste\u015Bmy bardzo daleko od pewnego obiektu,
+        to grawitacja mo\u017Ce by\u0107 tak ma\u0142a, \u017Ce prawie nieodczuwalna."
+      extraData: ExtraData
+      inputSetIndex: 10
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Tak wi\u0119c to jak przyci\u0105ganie grawitacyjne dzia\u0142a na dwa
+        obiekty zale\u017Cy od ich mas oraz odleg\u0142o\u015Bci mi\u0119dzy nimi."
       extraData: ExtraData
       inputSetIndex: 10
       outputNodeIndex: -1
@@ -498,19 +541,20 @@ MonoBehaviour:
     ID: 10
     rect:
       serializedVersion: 2
-      x: 2640
-      y: 240
+      x: 2430
+      y: -40
       width: 348
-      height: 226
+      height: 317.33334
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 3
+  - commentCount: 4
     s_comment:
-    - text: "To dlaczego mia\u0142by on sobie gorzej radzi\u0107 w kosmosie?"
+    - text: "Skoro grawitacja dzia\u0142a, to dlaczego wszystko tutaj lata? Na Ziemi
+        rzeczy spadaj\u0105."
       extraData: ExtraData
       inputSetIndex: 11
       outputNodeIndex: 12
@@ -521,11 +565,12 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 32
+        height: 46
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: "Czyli m\xF3zg dostaje sprzeczne informacje?"
+    - text: "Czyli jeste\u015Bmy wystarczaj\u0105co daleko, \u017Ceby nie odczuwa\u0107
+        przyci\u0105gania Ziemi?"
       extraData: ExtraData
       inputSetIndex: 11
       outputNodeIndex: 13
@@ -534,13 +579,13 @@ MonoBehaviour:
       outRect:
         serializedVersion: 2
         x: 300
-        y: 94
+        y: 108
         width: 30
-        height: 32
+        height: 46
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: To brzmi jak opis choroby lokomocyjnej.
+    - text: "Natomiast stacja kosmiczna jest w ruchu\u2026 To on jest kluczowy!"
       extraData: ExtraData
       inputSetIndex: 11
       outputNodeIndex: 14
@@ -549,19 +594,34 @@ MonoBehaviour:
       outRect:
         serializedVersion: 2
         x: 300
-        y: 126
+        y: 156
         width: 30
         height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "[Wyjd\u017A z dialogu] Dzi\u0119ki za rozmow\u0119, ale misja czeka!"
+      extraData: ExtraData
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 11
     rect:
       serializedVersion: 2
-      x: 3050
-      y: 280
+      x: 2820
+      y: -30
       width: 348
-      height: 200
+      height: 262
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -570,8 +630,9 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: "Bo bez grawitacji te narz\u0105dy wysy\u0142aj\u0105 myl\u0105ce sygna\u0142y.
-        M\xF3zg musi nauczy\u0107 si\u0119 je ignorowa\u0107."
+    - text: "To mo\u017Ce Ci\u0119 troch\u0119 zaskoczy\u0107, ale w pewnym sensie
+        ca\u0142y czas spadamy, przez co wydaje si\u0119, jakby\u015Bmy latali. Panuje
+        tu stan niewa\u017Cko\u015Bci."
       extraData: ExtraData
       inputSetIndex: 12
       outputNodeIndex: 15
@@ -582,17 +643,17 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 46
+        height: 76
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 12
     rect:
       serializedVersion: 2
-      x: 3460
-      y: 220
+      x: 3220
+      y: -190
       width: 348
-      height: 149.33333
+      height: 178.66666
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -601,7 +662,9 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Dokadnie tak!
+    - text: "Wbrew pozorom grawitacja jest tutaj prawie tak samo silna jak na powierzchni!
+        To, co czujemy jako niewa\u017Cko\u015B\u0107, to efekt ci\u0105g\u0142ego
+        spadania po orbicie."
       extraData: ExtraData
       inputSetIndex: 13
       outputNodeIndex: 15
@@ -612,17 +675,17 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 22
+        height: 76
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 13
     rect:
       serializedVersion: 2
-      x: 3460
-      y: 360
+      x: 3220
+      y: -20
       width: 348
-      height: 125
+      height: 178.66666
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -631,8 +694,9 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: "W pewnym sensie to jej kosmiczna wersja. Objawy mog\u0105 by\u0107 dosy\u0107
-        podobne."
+    - text: "Pe\u0142na zgoda! Si\u0142a grawitacji jest tutaj prawie tak samo silna
+        jak na powierzchni. To, co czujemy jako niewa\u017Cko\u015B\u0107, to efekt
+        ci\u0105g\u0142ego spadania po orbicie."
       extraData: ExtraData
       inputSetIndex: 14
       outputNodeIndex: 15
@@ -643,28 +707,28 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 46
+        height: 76
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 14
     rect:
       serializedVersion: 2
-      x: 3460
-      y: 480
+      x: 3220
+      y: 150
       width: 348
-      height: 149.33333
+      height: 178.66666
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
+  - commentCount: 2
     s_comment:
-    - text: "Natomiast, nie ma czym si\u0119 martwi\u0107 - po kilku dniach wi\u0119kszo\u015B\u0107
-        astronaut\xF3w czuje si\u0119 ju\u017C dobrze! M\xF3zg dostosowuje si\u0119,
-        a problemy z r\xF3wnowag\u0105 znikaj\u0105."
+    - text: "Mi\u0119dzynarodowa Stacja Kosmiczna porusza si\u0119 dooko\u0142a Ziemi
+        z pr\u0119dko\u015Bci\u0105 blisk\u0105 7,6 km/s. To oko\u0142o 8 razy szybciej
+        ni\u017C pocisk wystrzelony z broni palnej! "
       extraData: ExtraData
       inputSetIndex: 15
       outputNodeIndex: 16
@@ -679,87 +743,42 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
+    - text: "To w\u0142a\u015Bnie dzi\u0119ki takiej pr\u0119dko\u015Bci potrafimy,
+        mimo  przyci\u0105gania Ziemi, okr\u0105\u017Ca\u0107 j\u0105 zamiast spa\u015B\u0107
+        - tak powstaje orbita."
+      extraData: ExtraData
+      inputSetIndex: 15
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
     ID: 15
     rect:
       serializedVersion: 2
-      x: 3950
-      y: 330
+      x: 3600
+      y: -50
       width: 348
-      height: 193.33334
+      height: 270
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 3
+  - commentCount: 4
     s_comment:
-    - text: "Ca\u0142e szcz\u0119\u015Bcie! Rozumiem, \u017Ce po tym b\u0119dzie
-        ju\u017C z g\xF3rki?"
-      extraData: ExtraData
-      inputSetIndex: 16
-      outputNodeIndex: 17
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 301
-        y: 61
-        width: 30
-        height: 32
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: "Jasne! Ale z tego co kojarz\u0119, przebywanie w warunkach mikrograwitacji
-        wp\u0142ywa na znacznie wiele aspket\xF3w organizmu."
-      extraData: ExtraData
-      inputSetIndex: 16
-      outputNodeIndex: 18
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 300
-        y: 94
-        width: 30
-        height: 76
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: "Ca\u0142kiem nie\u017Ale adaptujemy si\u0119 do tak trudnych warunk\xF3w."
+    - text: "Wr\xF3\u0107my do stanu niewa\u017Cko\u015Bci\u2026 "
       extraData: ExtraData
       inputSetIndex: 16
       outputNodeIndex: 19
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 300
-        y: 170
-        width: 30
-        height: 32
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 16
-    rect:
-      serializedVersion: 2
-      x: 4350
-      y: 330
-      width: 348
-      height: 244
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: "Emmm\u2026 Nie do ko\u0144ca."
-      extraData: ExtraData
-      inputSetIndex: 17
-      outputNodeIndex: 20
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -771,13 +790,91 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
+    - text: "Ci\u0105g\u0142e spadanie? Czy to znaczy, \u017Ce co\u015B nam grozi?"
+      extraData: ExtraData
+      inputSetIndex: 16
+      outputNodeIndex: 17
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 84
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Czyli dlatego czujemy si\u0119, jakby\u015Bmy nic nie wa\u017Cyli?"
+      extraData: ExtraData
+      inputSetIndex: 16
+      outputNodeIndex: 18
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 117
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "[Wyjd\u017A z dialogu] Dzi\u0119ki za rozmow\u0119, ale misja czeka!"
+      extraData: ExtraData
+      inputSetIndex: 16
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 16
+    rect:
+      serializedVersion: 2
+      x: 4000
+      y: -50
+      width: 348
+      height: 223
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "W \u017Cadnym wypadku! To zjawisko jest przewidywalne i w pe\u0142ni
+        bezpieczne. Dop\xF3ki ISS utrzymuje swoj\u0105 pr\u0119dko\u015B\u0107 i
+        wysoko\u015B\u0107, b\u0119dziemy w tym samym \u201Espadaniu\u201D przez
+        ca\u0142y czas."
+      extraData: ExtraData
+      inputSetIndex: 17
+      outputNodeIndex: 20
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 61
+        width: 30
+        height: 105
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
     ID: 17
     rect:
       serializedVersion: 2
-      x: 4790
-      y: 260
+      x: 4490
+      y: 50
       width: 348
-      height: 125
+      height: 208
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -786,9 +883,9 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: "To prawda. Przestrze\u0144 kosmiczna kryje w sobie wiele zagadek, kt\xF3re
-        ludzko\u015B\u0107 chce zbada\u0107, ale jednocze\u015Bnie naszym naturalnym
-        \u015Brodowskiem jest Ziemia."
+    - text: "Dok\u0142adnie! Nasze cia\u0142a, sprz\u0119t, a nawet powietrze wok\xF3\u0142
+        nas spadaj\u0105 w tym samym tempie co stacja, wi\u0119c nie czujemy jakby
+        cokolwiek nas przyci\u0105ga\u0142o."
       extraData: ExtraData
       inputSetIndex: 18
       outputNodeIndex: 20
@@ -806,8 +903,8 @@ MonoBehaviour:
     ID: 18
     rect:
       serializedVersion: 2
-      x: 4790
-      y: 380
+      x: 4490
+      y: 250
       width: 348
       height: 178.66666
     pTag: 
@@ -816,15 +913,68 @@ MonoBehaviour:
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
+  - commentCount: 2
     s_comment:
-    - text: "Z jednej strony tak, a z drugiej nie jest to takie proste\u2026 W pewnych
-        aspektach udaj\u0119 si\u0119 nam dostosowa\u0107, ale przestaj\u0119 by\u0107
-        tak weso\u0142o, gdyby wyj\u015B\u0107 na spacer kosmiczny bez skafandra.
-        Niekt\xF3rych rzeczy nie da si\u0119 przeskoczy\u0107."
+    - text: "Jasne! Zgodnie z definicj\u0105 niewa\u017Cko\u015B\u0107, to stan,
+        kiedy na cia\u0142o nie dzia\u0142aj\u0105 si\u0142y kontaktowe. Wyobra\u017A
+        sobie, \u017Ce stoisz na jednej nodze, odczuwasz wtedy na niej ca\u0142y
+        sw\xF3j ci\u0119\u017Car. Gdyby\u015B Twoje cia\u0142o unosi\u0142o si\u0119
+        w powietrzu, nie da\u0142oby rady okre\u015Bli\u0107 w\u0142asnego ci\u0119\u017Caru."
       extraData: ExtraData
       inputSetIndex: 19
       outputNodeIndex: 20
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 61
+        width: 30
+        height: 149
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Na stacji kosmicznej grawitacja wci\u0105\u017C dzia\u0142a na astronaut\xF3w,
+        ale poniewa\u017C ca\u0142a stacja i oni sami znajduj\u0105 si\u0119 w stanie
+        ci\u0105g\u0142ego swobodnego spadku po orbicie, to nie maj\u0105 oparcia,
+        kt\xF3re wywo\u0142ywa\u0142oby uczucie ci\u0119\u017Caru. W efekcie unosz\u0105
+        si\u0119 wewn\u0105trz stacji i odczuwaj\u0105 stan niewa\u017Cko\u015Bci."
+      extraData: ExtraData
+      inputSetIndex: 19
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 19
+    rect:
+      serializedVersion: 2
+      x: 4490
+      y: -380
+      width: 348
+      height: 402
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: "Widzisz\u2026 Ca\u0142y czas spadamy, ale nigdy nie dotykamy Ziemi,
+        bo poruszamy si\u0119 z ogromn\u0105 pr\u0119dko\u015Bci\u0105! Dzi\u0119ki
+        temu nieustannie okr\u0105\u017Camy nasz\u0105 planet\u0119. Taka zakrzywiona
+        \u015Bcie\u017Cka wok\xF3\u0142 Ziemi to w\u0142a\u015Bnie orbita."
+      extraData: ExtraData
+      inputSetIndex: 20
+      outputNodeIndex: 21
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -836,43 +986,8 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 19
-    rect:
-      serializedVersion: 2
-      x: 4790
-      y: 550
-      width: 348
-      height: 222.66666
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 2
-    s_comment:
-    - text: "Mo\u017Ce pami\u0119tasz, \u017Ce cho\u0107 grawitacja dzia\u0142a,
-        to w pewnym sensie jest r\xF3wnowa\u017Cona przez ruch po orbicie stacji
-        kosmicznej."
-      extraData: ExtraData
-      inputSetIndex: 20
-      outputNodeIndex: 21
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 301
-        y: 61
-        width: 30
-        height: 61
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: "Widzisz, na Ziemi nasze serce pompuje krew przeciwko dzia\u0142aj\u0105cej
-        grawitacji. W kosmosie, w stanie niewa\u017Cko\u015Bci, grawitacja przestaje
-        kierowa\u0107 kr\u0105\u017Cenie w ten spos\xF3b, wi\u0119c krew i inne p\u0142yny
-        gromadz\u0105 si\u0119 w g\xF3rnej cz\u0119\u015Bci cia\u0142a. Poniewa\u017C
-        serce nie musi pracowa\u0107 przeciwko grawitacji, s\u0142abnie."
+    - text: "Poniewa\u017C wszystko na stacji spada w tym samym tempie co my, wygl\u0105da
+        to tak, jakby przedmioty i ludzie unosi\u0142y si\u0119 w powietrzu."
       extraData: ExtraData
       inputSetIndex: 20
       outputNodeIndex: -1
@@ -890,23 +1005,69 @@ MonoBehaviour:
     ID: 20
     rect:
       serializedVersion: 2
-      x: 5220
-      y: 390
+      x: 4890
+      y: -30
       width: 348
-      height: 314
+      height: 299.3333
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 3
+  - commentCount: 2
     s_comment:
-    - text: "To dlatego astronauci cz\u0119sto maj\u0105 nabrzmia\u0142e twarze i
-        jednocze\u015Bnie \u201Echudsze\u201D nogi!"
+    - text: "Wyt\u0142umacz mi jeszcze\u2026"
       extraData: ExtraData
       inputSetIndex: 21
-      outputNodeIndex: 24
+      outputNodeIndex: 22
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 61
+        width: 30
+        height: 22
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "[Wyjd\u017A z dialogu] Dzi\u0119ki za rozmow\u0119, ale misja czeka!Pora
+        na mnie\u2026"
+      extraData: ExtraData
+      inputSetIndex: 21
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 21
+    rect:
+      serializedVersion: 2
+      x: 5300
+      y: 40
+      width: 348
+      height: 172.33333
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 3
+    s_comment:
+    - text: "O co chodzi\u0142o z tym stanem niewa\u017Cko\u015Bci i ruchem dooko\u0142a
+        planety?"
+      extraData: ExtraData
+      inputSetIndex: 22
+      outputNodeIndex: 23
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -918,10 +1079,10 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: "To musi prowadzi\u0107 do wielu problem\xF3w zdrowotnych."
+    - text: Co to mikrograwitacja?
       extraData: ExtraData
-      inputSetIndex: 21
-      outputNodeIndex: 22
+      inputSetIndex: 22
+      outputNodeIndex: 24
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -929,41 +1090,11 @@ MonoBehaviour:
         x: 300
         y: 108
         width: 30
-        height: 32
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: "Jak mog\u0119 temu przeciwdzia\u0142a\u0107?"
-      extraData: ExtraData
-      inputSetIndex: 21
-      outputNodeIndex: 23
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 300
-        y: 141
-        width: 30
         height: 22
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 21
-    rect:
-      serializedVersion: 2
-      x: 5640
-      y: 520
-      width: 348
-      height: 205
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: "To prawda. Natomiast,to nie jest tak, \u017Ce bezczynnie czekamy!"
+    - text: "Gdzie my jeste\u015Bmy?"
       extraData: ExtraData
       inputSetIndex: 22
       outputNodeIndex: 25
@@ -971,33 +1102,36 @@ MonoBehaviour:
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 301
-        y: 61
+        x: 300
+        y: 131
         width: 30
-        height: 32
+        height: 22
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 22
     rect:
       serializedVersion: 2
-      x: 6010
-      y: 570
+      x: 5710
+      y: -180
       width: 348
-      height: 134.66666
+      height: 195.33333
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 0
-  - commentCount: 1
+    isPlayer: 1
+  - commentCount: 2
     s_comment:
-    - text: "To bardzo wa\u017Cne pytanie. Na Mi\u0119dzynarodowej Stacji Kosmicznej
-        (ISS) skupiamy si\u0119 na utrzymywaniu kosmonaut\xF3w w dobrym zdrowiu."
+    - text: "To po\u0142\u0105czenie si\u0142y grawitacji i ogromnej pr\u0119dko\u015Bci.
+        Wyobra\u017A sobie, \u017Ce chcesz przeskoczy\u0107 pi\u0142k\u0119. Je\u015Bli
+        po prostu skoczysz pionowo, wyl\u0105dujesz na niej. Je\u015Bli jednak skoczysz
+        w prz\xF3d, a jeszcze lepiej, je\u015Bli mocno si\u0119 rozp\u0119dzisz,
+        mo\u017Cesz j\u0105 przeskoczy\u0107."
       extraData: ExtraData
       inputSetIndex: 23
-      outputNodeIndex: 25
+      outputNodeIndex: 26
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -1005,32 +1139,47 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 76
+        height: 134
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "My na ISS jeste\u015Bmy tak rozp\u0119dzeni, \u017Ce za ka\u017Cdym
+        razem \u201Eprzeskakujemy\u201D Ziemi\u0119, poruszaj\u0105c si\u0119 w k\xF3\u0142ko
+        wok\xF3\u0142 niej. Takie okr\u0105\u017Canie planety to ruch po orbicie."
+      extraData: ExtraData
+      inputSetIndex: 23
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 23
     rect:
       serializedVersion: 2
-      x: 6010
-      y: 700
+      x: 6140
+      y: -440
       width: 348
-      height: 178.66666
+      height: 328.66666
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
+  - commentCount: 2
     s_comment:
-    - text: "Dokadnie tak, cho\u0107 to tylko cz\u0119\u015B\u0107 historii. Jak
-        mo\u017Cesz sobie wyobrazi\u0107 mniejsza aktywno\u015B\u0107 mi\u0119\u015Bni
-        i zmiany kr\u0105\u017Cenia krwi mog\u0105 spowodowa\u0107 szkody, ale od
-        pocz\u0105tku..."
+    - text: "Mikrograwitacja to stan, w kt\xF3rym grawitacja wci\u0105\u017C dzia\u0142a,
+        ale jej skutki s\u0105 prawie niewyczuwalne."
       extraData: ExtraData
       inputSetIndex: 24
-      outputNodeIndex: 25
+      outputNodeIndex: 26
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -1038,30 +1187,47 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 90
+        height: 61
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "W naszym przypadku dzieje si\u0119 tak, poniewa\u017C my i wszystko
+        wok\xF3\u0142 nas spadamy w tym samym tempie. Nie czujemy wi\u0119c nacisku
+        pod\u0142o\u017Ca na nasze cia\u0142a; st\u0105d wra\u017Cenie unoszenia
+        si\u0119."
+      extraData: ExtraData
+      inputSetIndex: 24
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 24
     rect:
       serializedVersion: 2
-      x: 6010
-      y: 390
+      x: 6140
+      y: -110
       width: 348
-      height: 193.33334
+      height: 255.33334
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
+  - commentCount: 2
     s_comment:
-    - text: "Widzisz, ka\u017Cdy kosmonauta codziennie du\u017Co trenuje... \u0106wiczenia
-        fizyczne przeciwdzia\u0142aj\u0105 zanikowi mi\u0119\u015Bni oraz os\u0142abieniu
-        ko\u015Bci, kt\xF3re w niewa\u017Cko\u015Bci nie s\u0105 tak obci\u0105\u017Cane
-        jak na Ziemi. Regularny trening pomaga te\u017C utrzyma\u0107 dobr\u0105
-        wydolno\u015B\u0107 serca i uk\u0142adu kr\u0105\u017Cenia."
+    - text: "Znajdujemy si\u0119 oko\u0142o 400 kilometr\xF3w nad powierzchni\u0105
+        Ziemi, na pok\u0142adzie Mi\u0119dzynarodowej Stacji Kosmicznej. Okr\u0105\u017Camy
+        planet\u0119 w mniej wi\u0119cej 90 minut, co oznacza, \u017Ce ka\u017Cdego
+        dnia widzimy wsch\xF3d i zach\xF3d S\u0142o\u0144ca a\u017C 16 razy!"
       extraData: ExtraData
       inputSetIndex: 25
       outputNodeIndex: 26
@@ -1072,64 +1238,197 @@ MonoBehaviour:
         x: 301
         y: 61
         width: 30
-        height: 149
+        height: 134
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "No i od przylotu S\u0142awosza jemy pierogi\u2026 Tak samo ekscytuj\u0105ce!"
+      extraData: ExtraData
+      inputSetIndex: 25
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 25
     rect:
       serializedVersion: 2
-      x: 6550
-      y: 630
+      x: 6140
+      y: 140
       width: 348
-      height: 252
+      height: 270
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 2
+  - commentCount: 4
     s_comment:
-    - text: "Dobra, dosy\u0107 gadania! Pora na dzia\u0142anie, a w\u0142a\u015Bciwe
-        na Tw\xF3j spacer kosmiczny."
+    - text: "Wyt\u0142umacz mi jeszcze\u2026"
       extraData: ExtraData
       inputSetIndex: 26
-      outputNodeIndex: -1
+      outputNodeIndex: 22
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 301
+        y: 61
+        width: 30
+        height: 22
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: "Wejd\u017A w skafander po Twojej lewej i id\u017A na wprost do w\u0142azu,
-        aby opu\u015Bci\u0107 stacj\u0119."
+    - text: "Jasne, dzi\u0119ki! Do zobaczenia!"
       extraData: ExtraData
       inputSetIndex: 26
-      outputNodeIndex: -1
+      outputNodeIndex: 27
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 300
+        y: 84
+        width: 30
+        height: 22
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Widzimy si\u0119 na obiedzie."
+      extraData: ExtraData
+      inputSetIndex: 26
+      outputNodeIndex: 28
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 107
+        width: 30
+        height: 22
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Przecie\u017C to wszystko wiedzia\u0142em\u2026 Jestem kosmonaut\u0105!"
+      extraData: ExtraData
+      inputSetIndex: 26
+      outputNodeIndex: 29
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 130
+        width: 30
+        height: 46
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 26
     rect:
       serializedVersion: 2
-      x: 6960
-      y: 660
+      x: 6600
+      y: -70
       width: 348
-      height: 196.66666
+      height: 218.33333
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Do potem i\u2026 Powodzenia!"
+      extraData: ExtraData
+      inputSetIndex: 27
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 27
+    rect:
+      serializedVersion: 2
+      x: 7060
+      y: -30
+      width: 348
+      height: 125
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: "Nie przejadaj si\u0119, w ko\u0144cu czeka Ci\u0119 spacer\u2026"
+      extraData: ExtraData
+      inputSetIndex: 28
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 28
+    rect:
+      serializedVersion: 2
+      x: 7060
+      y: 90
+      width: 348
+      height: 134.66666
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: "Ma\u0142e przypomnienie nikomu jeszcze nie zaszkodzi\u0142o\u2026 Chyba."
+      extraData: ExtraData
+      inputSetIndex: 29
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 29
+    rect:
+      serializedVersion: 2
+      x: 7060
+      y: 220
+      width: 348
+      height: 134.66666
     pTag: 
     expand: 0
     sprite: {fileID: 0}

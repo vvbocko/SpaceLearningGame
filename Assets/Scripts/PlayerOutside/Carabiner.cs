@@ -14,23 +14,18 @@ public class Carabiner : MonoBehaviour
     [SerializeField, Tooltip("Safety fix delay to re-snap local transform after parent change")]
     private float waitFixTime = 0.25f;
 
-    // state
     public bool IsAttached { get; private set; } = false;
     public ShelfHangZone AttachedShelf { get; private set; }
     public Transform AttachedHangPoint { get; private set; }
     private int attachedIndex = -1;
 
-    // runtime refs
     private OutsidePickUpContoller outsidePickUpController;
     private RailMovement playerRailMovement;
     private Rigidbody rb;
 
-    // internal
     private bool isMovingBetweenHangPoints = false;
     private Coroutine moveCoroutine;
 
-    // --- scale stability ---
-    // Desired visual world scale that we will preserve across parenting/unparenting:
     private Vector3 desiredWorldScale;
 
     void Start()
@@ -74,7 +69,6 @@ public class Carabiner : MonoBehaviour
         AttachedHangPoint = hangPoint;
         attachedIndex = shelf.GetIndexOfPoint(hangPoint);
 
-        // Parent & zero local transform immediately (keep local values after parenting)
         transform.SetParent(hangPoint, false);
 
         // Ensure visual scale stays the same in world space

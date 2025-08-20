@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private FixingMiniGame fixingGame;
 
     [SerializeField] private GameObject mainMenuUI;
     [SerializeField] private GameObject settingsMenuUI;
@@ -27,6 +28,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Slider sensitivitySlider;
     [SerializeField] private float minSensitivity = 50f;
     [SerializeField] private float maxSensitivity = 150f;
+    [SerializeField] private float startSensitivity = 85f;
 
     public bool isPaused = false;
     public bool wasPopUpShown = false;
@@ -43,6 +45,7 @@ public class MainMenu : MonoBehaviour
         firstPopUp.SetActive(false);
         secondPopUp.SetActive(false);
         thirdPopUp.SetActive(false);
+        endingMessage.SetActive(false);
 
         firstInstruction.SetActive(false);
         secondInstruction.SetActive(false);
@@ -50,9 +53,11 @@ public class MainMenu : MonoBehaviour
         cameraRotation.SetCursorLock(false);
         cameraRotation.enabled = false;
 
-        sensitivitySlider.value = cameraRotation.sensitivity;
+        float normalizedStart = Mathf.InverseLerp(minSensitivity, maxSensitivity, startSensitivity);
+        sensitivitySlider.value = normalizedStart;
+
+        SetSensitivity(normalizedStart);
         sensitivitySlider.onValueChanged.AddListener(SetSensitivity);
-        SetSensitivity(sensitivitySlider.value);
 
     }
     void Update()

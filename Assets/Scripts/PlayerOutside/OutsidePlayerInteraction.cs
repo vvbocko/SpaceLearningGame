@@ -73,9 +73,7 @@ public class OutsidePlayerInteraction : MonoBehaviour
                 return;
             }
 
-            // CASE 2: Holding carabiner && clicked on a rail -> pin to the hang point nearest the click
-            if (outsidePickUpController != null && outsidePickUpController.IsHoldingSomething()
-                && outsidePickUpController.GetHeldObject() == carabiner?.GetComponent<Interactable>())
+            if (outsidePickUpController != null)
             {
                 // Do a raycast to get the exact hit point and the shelf hit
                 if (playerCamera == null) return;
