@@ -43,16 +43,10 @@ In this game we play as a novice astronaut aboard the International Space Statio
 
 <br><br>
 
-##  Status
-This is a **prototype**.
-Built in 1 month for the competition deadline. Planned fixes and improvements **after 20.09.2025**.
-
 ##  Future Improvements
 Planned updates after the competition deadline:  
-- Fix existing dialogue flow issues
 - Add a **second tether system** → at least one carabiner must stay pinned at all times for safety,
-- Further **optimize performance** - this time to improve quality while maintaining smooth gameplay,
 - Extend the gameplay:
-   - Longer rail path leading to the Zvezda module (based on the real ISS leak site)
+   - Longer rail path leading to the Zvezda module (based on the real ISS leak problem)
    - After repairing the leak, player receives a warning from a fellow cosmonaut about an incoming solar storm → player has 5 minutes to return inside the ISS
  
