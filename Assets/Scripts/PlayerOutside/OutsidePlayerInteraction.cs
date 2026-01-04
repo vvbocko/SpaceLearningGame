@@ -1,22 +1,15 @@
 using UnityEngine;
 using System;
 
-public class OutsidePlayerInteraction : MonoBehaviour
+public class OutsidePlayerInteraction : BasePlayerInteraction
 {
     public static OutsidePlayerInteraction Instance { get; private set; }
 
     [Header("References")]
     [SerializeField] private OutsidePickUpContoller outsidePickUpController;
-    [SerializeField] private Camera playerCamera;
-    [SerializeField] private Carabiner carabiner; // optional direct reference
+    [SerializeField] private Carabiner carabiner;
 
-    [Header("Settings")]
-    [SerializeField] private float playerReach = 3f;
-
-    private Interactable currentInteractable;
-    private bool interactionEnabled = true;
-
-    private void Awake()
+    protected override void Awake()
     {
         if (Instance == null) Instance = this;
 
@@ -34,38 +27,13 @@ public class OutsidePlayerInteraction : MonoBehaviour
     {
         interactionEnabled = enabled;
         GetComponent<RailMovement>().enabled = enabled;
-
-        CameraRotation camRotation = FindObjectOfType<CameraRotation>();
-        camRotation?.SetCursorLock(enabled);
-
-        if (!enabled && currentInteractable != null)
-        {
-            currentInteractable.DisableOutline();
-            currentInteractable = null;
-        }
+        base.SetInteractionEnabled(enabled);
     }
 
-    void Update()
-    {
-        HandleInteraction();
-    }
-
-    void HandleInteraction()
-    {
-        Interactable detectedInteractable = DetectInteractable();
-
-        if (detectedInteractable != currentInteractable)
-            UpdateCurrentInteractable(detectedInteractable);
-
-        if (interactionEnabled)
-            HandleInput();
-    }
-
-    void HandleInput()
+    protected override void HandleInput()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // CASE 1: Click a pinned carabiner -> detach & pick up
             if (carabiner != null && carabiner.IsAttached && currentInteractable == carabiner.GetComponent<Interactable>())
             {
                 carabiner.TryDetach();
@@ -75,7 +43,6 @@ public class OutsidePlayerInteraction : MonoBehaviour
 
             if (outsidePickUpController != null)
             {
-                // Do a raycast to get the exact hit point and the shelf hit
                 if (playerCamera == null) return;
 
                 Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
@@ -84,7 +51,6 @@ public class OutsidePlayerInteraction : MonoBehaviour
                     ShelfHangZone shelf = hit.collider.GetComponentInParent<ShelfHangZone>();
                     if (shelf != null)
                     {
-                        // choose hang point by using the actual hit.point
                         Transform chosenHangPoint = shelf.GetClosestHangPoint(hit.point);
                         if (chosenHangPoint == null)
                         {
@@ -92,45 +58,39 @@ public class OutsidePlayerInteraction : MonoBehaviour
                             return;
                         }
 
-                        // Stop pickup controller BEFORE attaching so it won't keep moving the object
                         outsidePickUpController.ForceRelease();
-
-                        // Attach the carabiner to the chosen hang point
                         carabiner.AttachToRail(shelf, chosenHangPoint);
                         return;
                     }
                 }
             }
 
-            // CASE 3: Normal pickup (pickable objects)
             if (currentInteractable != null && currentInteractable.IsPickable)
             {
                 HandlePickup();
                 return;
             }
 
-            // CASE 4: Other interactions
             if (currentInteractable != null && !currentInteractable.IsPickable)
             {
                 currentInteractable.Interact();
             }
         }
 
-        // Right click: drop
         if (Input.GetMouseButtonDown(1) && outsidePickUpController != null && outsidePickUpController.IsHoldingSomething())
         {
             outsidePickUpController.Drop();
         }
     }
 
-    void HandlePickup()
+    private void HandlePickup()
     {
         if (outsidePickUpController == null) return;
         if (outsidePickUpController.IsHoldingSomething()) outsidePickUpController.Drop();
         outsidePickUpController.TryPickUp(currentInteractable);
     }
 
-    Interactable DetectInteractable()
+    protected override Interactable DetectInteractable()
     {
         if (playerCamera == null) return null;
         Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
@@ -140,12 +100,5 @@ public class OutsidePlayerInteraction : MonoBehaviour
                 return interactable;
         }
         return null;
-    }
-
-    void UpdateCurrentInteractable(Interactable newInteractable)
-    {
-        currentInteractable?.DisableOutline();
-        currentInteractable = newInteractable;
-        currentInteractable?.EnableOutline();
     }
 }

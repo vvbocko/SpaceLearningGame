@@ -1,58 +1,23 @@
 ﻿using UnityEngine;
-using System;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction : BasePlayerInteraction
 {
     public static PlayerInteraction Instance { get; private set; }
 
-    [Header("References")]
     [SerializeField] private PickUpController pickupController;
-    [SerializeField] private Camera playerCamera;
-
-    [Header("Settings")]
-    [SerializeField] private float playerReach = 3f;
-
-    private Interactable currentInteractable;
-    private bool interactionEnabled = true;
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
     }
 
-    public void SetInteractionEnabled(bool enabled)
+    public override void SetInteractionEnabled(bool enabled)
     {
-        interactionEnabled = enabled;
+        base.SetInteractionEnabled(enabled);
         GetComponent<ZeroGravityMovement>().enabled = enabled;
-
-        CameraRotation camRotation = FindObjectOfType<CameraRotation>();
-        camRotation?.SetCursorLock(enabled);
-
-        if (!enabled && currentInteractable != null)
-        {
-            currentInteractable.DisableOutline();
-            currentInteractable = null;
-        }
     }
 
-    void Update()
-    {
-        HandleInteraction();
-    }
-
-    void HandleInteraction()
-    {
-        Interactable detectedInteractable = DetectInteractable();
-
-        if (detectedInteractable != currentInteractable)
-        {
-            UpdateCurrentInteractable(detectedInteractable);
-        }
-
-        if (interactionEnabled) HandleInput();
-    }
-
-    void HandleInput()
+    protected override void HandleInput()
     {
         if (Input.GetMouseButtonDown(1) && pickupController.IsHoldingSomething())
         {
@@ -73,7 +38,7 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    void HandlePickup()
+    private void HandlePickup()
     {
         if (pickupController.IsHoldingSomething())
         {
@@ -82,7 +47,7 @@ public class PlayerInteraction : MonoBehaviour
         pickupController.TryPickup(currentInteractable);
     }
 
-    Interactable DetectInteractable()
+    protected override Interactable DetectInteractable()
     {
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, playerReach))
@@ -90,16 +55,8 @@ public class PlayerInteraction : MonoBehaviour
             if (hit.collider.TryGetComponent(out Interactable interactable))
             {
                 return interactable;
-            }
-                
+            } 
         }
         return null;
-    }
-
-    void UpdateCurrentInteractable(Interactable newInteractable)
-    {
-        currentInteractable?.DisableOutline();
-        currentInteractable = newInteractable;
-        currentInteractable?.EnableOutline();
     }
 }
